@@ -53,9 +53,8 @@ git push origin main
 ### 2. Enable GitHub Pages
 1. Go to repository Settings
 2. Navigate to Pages section
-3. Select "Deploy from a branch"
-4. Choose `gh-pages` branch
-5. Click Save
+3. Select "GitHub Actions" as source
+4. The workflow will handle deployment automatically
 
 ### 3. Monitor Deployment
 1. Check GitHub Actions tab
@@ -93,6 +92,7 @@ git push origin main
 - **Images not showing:** Verify file paths and case sensitivity
 - **Links broken:** Test all internal and external links
 - **Mobile issues:** Test on various devices and screen sizes
+- **Permission errors:** The new workflow handles permissions automatically
 
 ### Getting Help
 - Check GitHub Actions logs for error details

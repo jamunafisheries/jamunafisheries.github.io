@@ -14,15 +14,14 @@ This guide explains how to deploy and maintain the Jamuna Fisheries website on G
 1. Go to your repository on GitHub
 2. Click on **Settings** tab
 3. Scroll down to **Pages** section (in the left sidebar)
-4. Under **Source**, select **Deploy from a branch**
-5. Choose **gh-pages** branch
-6. Click **Save**
+4. Under **Source**, select **GitHub Actions**
+5. This will use the workflow file `.github/workflows/deploy.yml`
 
 ### 3. Configure GitHub Actions
 The repository includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that will:
 - Automatically build and deploy on every push to `main`
-- Create the `gh-pages` branch if it doesn't exist
-- Deploy the website to GitHub Pages
+- Use GitHub's official Pages deployment action
+- Deploy the website to GitHub Pages with proper permissions
 
 ## 🔄 Deployment Process
 
@@ -36,7 +35,7 @@ The repository includes a GitHub Actions workflow (`.github/workflows/deploy.yml
    ```
 3. GitHub Actions will automatically:
    - Build the website
-   - Deploy to the `gh-pages` branch
+   - Deploy to GitHub Pages
    - Make it live at `https://jamunafisheries.github.io`
 
 ### Manual Deployment (if needed)
@@ -47,18 +46,10 @@ If automatic deployment fails:
    - Click on **Actions** tab
    - Check for any failed workflows
 
-2. **Manual deployment:**
-   ```bash
-   # Create gh-pages branch if it doesn't exist
-   git checkout -b gh-pages
-   
-   # Add all files
-   git add .
-   git commit -m "Manual deployment"
-   
-   # Push to gh-pages branch
-   git push origin gh-pages
-   ```
+2. **Check Pages Settings:**
+   - Go to repository Settings > Pages
+   - Ensure source is set to "GitHub Actions"
+   - Verify the workflow is enabled
 
 ## 🔧 Configuration Updates
 
@@ -106,13 +97,18 @@ If automatic deployment fails:
 
 **3. GitHub Pages not enabled:**
 - Go to repository Settings > Pages
-- Ensure source is set to "Deploy from a branch"
-- Select `gh-pages` branch
+- Ensure source is set to "GitHub Actions"
+- Verify the workflow file exists
 
 **4. 404 errors:**
 - Check that `index.html` is in the root directory
 - Verify all file paths are correct
 - Clear browser cache
+
+**5. Permission errors:**
+- The workflow now uses GitHub's official Pages deployment
+- No need to manually create gh-pages branch
+- Permissions are handled automatically
 
 ### Getting Help
 - Check GitHub Actions logs for error details
