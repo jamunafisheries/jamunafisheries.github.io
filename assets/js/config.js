@@ -9,10 +9,11 @@ const CONFIG = {
         description: "Your trusted source for premium fish spawn and fingerlings. Quality fish seed production for aquaculture and fisheries development.",
         
         // Contact Information
-        phone: "+1 (555) 123-4567",
-        email: "info@jamunafisheries.com",
-        address: "123 Fisherman's Wharf",
-        city: "Coastal City, CC 12345",
+        phone: "+919609673056",
+        phone2: "+919434653910",
+        email: "nandiashis01@gmail.com",
+        address: "Vill - Mouchura, Post - Teliberia",
+        city: "Onda, Bankura, West Bengal 722144",
         
         // Business Hours
         hours: {
@@ -35,25 +36,37 @@ const CONFIG = {
             name: "Rohu Spawn",
             description: "High-quality Rohu (Labeo rohita) spawn for commercial fish farming",
             price: "Contact for Pricing",
-            image: "https://images.unsplash.com/photo-1544943915-3f18c920d3ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+            image: "assets/images/rohu-fish.jpg"
         },
         {
             name: "Catla Spawn",
             description: "Premium Catla (Catla catla) spawn for polyculture systems",
             price: "Contact for Pricing",
-            image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+            image: "assets/images/catla-fish.jpg"
         },
         {
             name: "Mrigal Spawn",
             description: "Quality Mrigal (Cirrhinus mrigala) spawn for traditional farming",
             price: "Contact for Pricing",
-            image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+            image: "assets/images/mrigal-fish.jpg"
+        },
+        {
+            name: "Silver Carp Spawn",
+            description: "Premium Silver Carp (Hypophthalmichthys molitrix) spawn for surface feeding",
+            price: "Contact for Pricing",
+            image: "assets/images/silver-carp.jpg"
+        },
+        {
+            name: "Grass Carp Spawn",
+            description: "Quality Grass Carp (Ctenopharyngodon idella) spawn for weed control",
+            price: "Contact for Pricing",
+            image: "assets/images/grass-carp.jpg"
         },
         {
             name: "Fingerlings",
             description: "Healthy fingerlings ready for stocking in ponds and tanks",
             price: "Contact for Pricing",
-            image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+            image: "assets/images/fingerlings.jpg"
         }
     ],
     
@@ -84,11 +97,11 @@ const CONFIG = {
     
     // SEO Configuration
     seo: {
-        title: "Jamuna Fisheries - Premium Fish Spawn Production",
-        description: "Jamuna Fisheries - Your trusted source for premium fish spawn and fingerlings. Quality fish seed production for aquaculture and fisheries development.",
-        keywords: "fish spawn, fingerlings, aquaculture, fish breeding, hatchery, fish seed, Rohu, Catla, Mrigal, fish farming",
-        author: "Jamuna Fisheries",
-        ogImage: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+        title: "Jamuna Fisheries - Premium Fish Spawn & Fingerlings Supplier in Bankura, West Bengal",
+        description: "Jamuna Fisheries - Leading fish spawn and fingerlings supplier in Bankura, West Bengal. Premium Rohu, Catla, Mrigal, Silver Carp spawn. Contact Mr. Ashis Nandi at 9609673056. All India delivery available.",
+        keywords: "Jamuna Fisheries, fish spawn supplier, fingerlings supplier, Bankura, West Bengal, Rohu spawn, Catla spawn, Mrigal spawn, Silver Carp spawn, fish farming, aquaculture, Mr. Ashis Nandi, fish seed production",
+        author: "Mr. Ashis Nandi - Jamuna Fisheries",
+        ogImage: "https://jamunafisheries.github.io/assets/images/about-sign.jpeg"
     }
 };
 
