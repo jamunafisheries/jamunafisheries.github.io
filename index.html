@@ -129,13 +129,6 @@
                 <li><a href="#products">Products</a></li>
                 <li><a href="#youtube">YouTube</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li class="language-switcher">
-                    <select id="languageSelect" onchange="changeLanguage(this.value)">
-                        <option value="en">English</option>
-                        <option value="hi">हिंदी</option>
-                        <option value="bn">বাংলা</option>
-                    </select>
-                </li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -144,6 +137,18 @@
             </div>
         </div>
     </nav>
+
+    <!-- Language Selector -->
+    <div class="language-selector-section">
+        <div class="language-selector-container">
+            <i class="fas fa-globe"></i>
+            <select id="languageSelect" onchange="changeLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="hi">हिंदी</option>
+                <option value="bn">বাংলা</option>
+            </select>
+        </div>
+    </div>
 
     <!-- News Update Banner -->
     <div class="news-banner">
