@@ -93,3 +93,6 @@ out/
 # Local configuration files
 config.local.js
 config.local.json 
+
+README.md
+DEPLOYMENT_CHECKLIST.md
