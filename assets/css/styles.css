@@ -525,6 +525,66 @@ body {
     padding: 6rem 0;
 }
 
+/* Product Categories */
+.product-categories {
+    margin-top: 3rem;
+}
+
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.category-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    color: #6b7280;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-tab:hover {
+    border-color: #1e40af;
+    color: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(30, 64, 175, 0.2);
+}
+
+.category-tab.active {
+    background: #1e40af;
+    border-color: #1e40af;
+    color: white;
+    box-shadow: 0 4px 16px rgba(30, 64, 175, 0.3);
+}
+
+.category-tab i {
+    font-size: 1.2rem;
+}
+
+.category-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.category-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -546,6 +606,7 @@ body {
 .product-image {
     height: 200px;
     overflow: hidden;
+    position: relative;
 }
 
 .product-image img {
@@ -557,6 +618,98 @@ body {
 
 .product-card:hover .product-image img {
     transform: scale(1.1);
+}
+
+/* Zoom Functionality */
+.zoomable {
+    cursor: pointer;
+}
+
+.zoom-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.zoom-overlay i {
+    color: white;
+    font-size: 2rem;
+    background: rgba(30, 64, 175, 0.8);
+    padding: 1rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.zoomable:hover .zoom-overlay {
+    opacity: 1;
+}
+
+.zoomable:hover .zoom-overlay i {
+    transform: scale(1.1);
+}
+
+/* Image Modal */
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    visibility: hidden;
+}
+
+.image-modal.active {
+    display: flex !important;
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    text-align: center;
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+    color: #1e40af;
 }
 
 .product-info {
@@ -582,17 +735,339 @@ body {
     color: #059669;
 }
 
+.clickable-price {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: rgba(5, 150, 105, 0.1);
+    border: 2px solid transparent;
+}
+
+.clickable-price:hover {
+    background: rgba(5, 150, 105, 0.2);
+    border-color: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+}
+
+/* Contact Modal */
+.contact-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    visibility: hidden;
+}
+
+.contact-modal.active {
+    display: flex !important;
+    opacity: 1;
+    visibility: visible;
+}
+
+.contact-modal .modal-content {
+    position: relative;
+    max-width: 500px;
+    width: 90%;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    padding: 0;
+}
+
+.contact-modal-content {
+    padding: 2rem;
+}
+
+.contact-modal-content h3 {
+    color: #1e40af;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-details {
+    margin-bottom: 2rem;
+}
+
+.contact-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    border-left: 4px solid #1e40af;
+}
+
+.contact-detail-item i {
+    color: #1e40af;
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+    min-width: 20px;
+}
+
+.contact-detail-item strong {
+    color: #1e293b;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.contact-detail-item p {
+    color: #64748b;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.contact-detail-item a {
+    color: #1e40af;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-detail-item a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+.contact-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-actions .btn {
+    flex: 1;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.contact-actions .btn-primary {
+    background: #1e40af;
+    color: #fff;
+}
+
+.contact-actions .btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+}
+
+.contact-actions .btn-secondary {
+    background: #10b981;
+    color: #fff;
+}
+
+.contact-actions .btn-secondary:hover {
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+@media (max-width: 600px) {
+    .contact-modal .modal-content {
+        max-width: 95%;
+        margin: 1rem;
+    }
+    
+    .contact-modal-content {
+        padding: 1.5rem;
+    }
+    
+    .contact-actions {
+        flex-direction: column;
+    }
+    
+    .contact-actions .btn {
+        width: 100%;
+    }
+}
+
+/* Video Modal */
+.video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    visibility: hidden;
+}
+
+.video-modal.active {
+    display: flex !important;
+    opacity: 1;
+    visibility: visible;
+}
+
+.video-modal .modal-content {
+    position: relative;
+    max-width: 90%;
+    width: 800px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    padding: 0;
+}
+
+.video-modal-content {
+    padding: 0;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    background: #000;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    display: block;
+}
+
+.video-info {
+    padding: 1.5rem;
+    background: #fff;
+}
+
+.video-info h3 {
+    color: #1e40af;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.video-info p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Make YouTube videos clickable */
+.video-embed {
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.video-embed iframe {
+    pointer-events: none;
+    position: relative;
+    z-index: 1;
+}
+
+.video-embed::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.video-embed:hover::after {
+    opacity: 1;
+}
+
+.video-embed::before {
+    content: '🔍';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.video-embed:hover::before {
+    opacity: 1;
+}
+
+/* Ensure video embed is clickable */
+.video-embed:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .video-modal .modal-content {
+        max-width: 95%;
+        width: 95%;
+    }
+    
+    .video-container iframe {
+        height: 250px;
+    }
+    
+    .video-info {
+        padding: 1rem;
+    }
+    
+    .video-info h3 {
+        font-size: 1.1rem;
+    }
+}
+
 /* YouTube Section */
 .youtube {
     padding: 6rem 0;
     background: #f8fafc;
 }
 
-.youtube-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+/* YouTube Channel Info */
+.youtube-channel-info {
+    text-align: center;
+    margin-bottom: 4rem;
 }
 
 .youtube-info h3 {
@@ -624,17 +1099,150 @@ body {
     margin-right: 0.5rem;
 }
 
-.youtube-embed {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+/* YouTube Videos Grid */
+.youtube-videos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
 }
 
-.youtube-embed iframe {
+.video-item {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.video-embed {
+    position: relative;
     width: 100%;
-    height: 315px;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+.video-embed iframe {
+    width: 100%;
+    height: 250px;
     border: none;
+    display: block;
+}
+
+.video-info {
+    padding: 1.5rem;
+}
+
+.video-info h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1e40af;
+}
+
+.video-info p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* YouTube Channel Link */
+.youtube-channel-link {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.youtube-cta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.youtube-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+    border: 2px solid #ff0000;
+}
+
+.youtube-cta-btn:hover {
+    background: #cc0000;
+    border-color: #cc0000;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4);
+    color: #fff;
+    text-decoration: none;
+}
+
+.youtube-cta-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+}
+
+.youtube-cta-btn i {
+    font-size: 1.3rem;
+}
+
+.youtube-cta-text {
+    color: #666;
+    font-size: 1rem;
+    margin: 0;
+    font-style: italic;
+}
+
+.youtube-channel-link a:hover {
+    text-decoration: underline;
+}
+
+/* YouTube Subscribe Button */
+.youtube-subscribe-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+    border: 2px solid #ff0000;
+    margin-top: 1rem;
+}
+
+.youtube-subscribe-btn:hover {
+    background: #cc0000;
+    border-color: #cc0000;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4);
+    color: #fff;
+    text-decoration: none;
+}
+
+.youtube-subscribe-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+}
+
+.youtube-subscribe-btn i {
+    font-size: 1.3rem;
 }
 
 /* YouTube Videos Grid */
@@ -1068,6 +1676,29 @@ body {
     .contact-info {
         order: 1;
     }
+    
+    .category-tabs {
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .category-tab {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .category-tab i {
+        font-size: 1rem;
+    }
+    
+    .youtube-videos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .video-embed iframe {
+        height: 200px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1086,6 +1717,26 @@ body {
 
     .videos-container {
         grid-template-columns: 1fr;
+    }
+    
+    .category-tabs {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    
+    .category-tab {
+        width: 200px;
+        justify-content: center;
+    }
+    
+    .youtube-videos-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .video-embed iframe {
+        height: 180px;
     }
 }
 

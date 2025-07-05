@@ -198,6 +198,147 @@ document.body.style.transition = 'opacity 0.5s ease';
 document.addEventListener('DOMContentLoaded', () => {
     // Add click-to-copy functionality for contact info
     const contactItems = document.querySelectorAll('.contact-item p');
+    
+    // Category tabs functionality
+    const categoryTabs = document.querySelectorAll('.category-tab');
+    const categoryContents = document.querySelectorAll('.category-content');
+    
+    categoryTabs.forEach(tab => {
+        tab.addEventListener('click', (e) => {
+            e.preventDefault();
+            const category = tab.getAttribute('data-category');
+            
+            // Remove active class from all tabs and contents
+            categoryTabs.forEach(t => t.classList.remove('active'));
+            categoryContents.forEach(c => c.classList.remove('active'));
+            
+            // Add active class to clicked tab and corresponding content
+            tab.classList.add('active');
+            const targetContent = document.getElementById(category);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+    
+    // Image zoom functionality
+    const zoomableImages = document.querySelectorAll('.zoomable');
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    
+    zoomableImages.forEach(card => {
+        card.addEventListener('click', () => {
+            const image = card.querySelector('.zoom-image');
+            const imageSrc = image.getAttribute('src');
+            const imageAlt = image.getAttribute('alt');
+            
+            modalImage.setAttribute('src', imageSrc);
+            modalImage.setAttribute('alt', imageAlt);
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Close modal when clicking outside
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+    
+    // Contact modal event listeners
+    const contactModal = document.getElementById('contactModal');
+    if (contactModal) {
+        // Close contact modal when clicking outside
+        contactModal.addEventListener('click', (e) => {
+            if (e.target === contactModal) {
+                closeContactModal();
+            }
+        });
+        
+        // Close contact modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && contactModal.classList.contains('active')) {
+                closeContactModal();
+            }
+        });
+    }
+    
+    // Video modal functionality
+    const videoModal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    const modalVideoTitle = document.getElementById('modalVideoTitle');
+    const modalVideoDescription = document.getElementById('modalVideoDescription');
+    
+    // Add click event listeners to all video embeds
+    const videoEmbeds = document.querySelectorAll('.video-embed');
+    console.log('Found video embeds:', videoEmbeds.length); // Debug log
+    
+    videoEmbeds.forEach((videoEmbed, index) => {
+        console.log(`Adding click listener to video ${index + 1}`); // Debug log
+        
+        // Prevent iframe from capturing clicks
+        const iframe = videoEmbed.querySelector('iframe');
+        if (iframe) {
+            iframe.style.pointerEvents = 'none';
+        }
+        
+        videoEmbed.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Video clicked!'); // Debug log
+            
+            const iframe = this.querySelector('iframe');
+            const videoItem = this.closest('.video-item');
+            const videoInfo = videoItem.querySelector('.video-info');
+            const title = videoInfo.querySelector('h4').textContent;
+            const description = videoInfo.querySelector('p').textContent;
+            
+            console.log('Video title:', title); // Debug log
+            
+            // Get the video URL and add autoplay parameter
+            let videoUrl = iframe.src;
+            if (videoUrl.includes('?')) {
+                videoUrl += '&autoplay=1';
+            } else {
+                videoUrl += '?autoplay=1';
+            }
+            
+            // Update modal content
+            modalVideo.src = videoUrl;
+            modalVideoTitle.textContent = title;
+            modalVideoDescription.textContent = description;
+            
+            // Show modal
+            videoModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Close video modal when clicking outside
+    if (videoModal) {
+        videoModal.addEventListener('click', (e) => {
+            if (e.target === videoModal) {
+                closeVideoModal();
+            }
+        });
+        
+        // Close video modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+                closeVideoModal();
+            }
+        });
+    }
+    
+    // Add click-to-copy functionality for contact info
     contactItems.forEach(item => {
         item.style.cursor = 'pointer';
         item.addEventListener('click', function() {
@@ -222,6 +363,70 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Close modal function
+function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Test modal function
+function testModal() {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    modalImage.setAttribute('src', 'assets/images/rohu-fish.jpg');
+    modalImage.setAttribute('alt', 'Test Image');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+// Test video modal function
+function testVideoModal() {
+    const videoModal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    const modalVideoTitle = document.getElementById('modalVideoTitle');
+    const modalVideoDescription = document.getElementById('modalVideoDescription');
+    
+    modalVideo.src = 'https://www.youtube.com/embed/m6ldeDh5-JI?autoplay=1';
+    modalVideoTitle.textContent = 'Test Video';
+    modalVideoDescription.textContent = 'This is a test video modal.';
+    
+    videoModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+// Show contact information function
+function showContactInfo() {
+    const contactModal = document.getElementById('contactModal');
+    if (contactModal) {
+        contactModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+// Close contact modal function
+function closeContactModal() {
+    const contactModal = document.getElementById('contactModal');
+    if (contactModal) {
+        contactModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+}
+
+// Close video modal function
+function closeVideoModal() {
+    const videoModal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    if (videoModal) {
+        videoModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        // Stop the video by clearing the src
+        if (modalVideo) {
+            modalVideo.src = '';
+        }
+    }
+}
 
 // Hero Image Slider
 (function() {

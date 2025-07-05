@@ -2,6 +2,11 @@
 const translations = {
     en: {
         // Navigation
+        "nav_home": "Home",
+        "nav_about": "About",
+        "nav_products": "Products",
+        "nav_youtube": "YouTube",
+        "nav_contact": "Contact",
         "home": "Home",
         "about": "About",
         "products": "Products",
@@ -36,8 +41,31 @@ const translations = {
         "view_google_maps": "View on Google Maps",
         
         // Products Section
-        "products_title": "Our Products",
+        "our_products": "Our Products",
         "products_subtitle": "We produce all kinds of spawn: Silver carp, Bata, Grass carp, etc",
+        "products_title": "Our Products",
+        // Product Categories
+        "category_fish": "Fish",
+        "category_eggs": "Eggs",
+        "category_spawns": "Spawns",
+        
+        // Fish Products
+        "rohu_fish": "Rohu Fish",
+        "rohu_fish_desc": "High-quality Rohu (Labeo rohita) fish for commercial fish farming",
+        "catla_fish": "Catla Fish",
+        "catla_fish_desc": "Premium Catla (Catla catla) fish for polyculture systems",
+        "mrigal_fish": "Mrigal Fish",
+        "mrigal_fish_desc": "Quality Mrigal (Cirrhinus mrigala) fish for traditional farming",
+        "puti_fish": "Puti Fish",
+        "puti_fish_desc": "Healthy puti fish ready for stocking in ponds and tanks",
+        
+        // Egg Products
+        "fish_eggs": "Fish Eggs",
+        "fish_eggs_desc": "Fresh fish eggs for breeding and aquaculture purposes",
+        "fertilized_eggs": "Fertilized Eggs",
+        "fertilized_eggs_desc": "High-quality fertilized fish eggs for hatchery operations",
+        
+        // Spawn Products
         "rohu_spawn": "Rohu Spawn",
         "rohu_spawn_desc": "High-quality Rohu (Labeo rohita) spawn for commercial fish farming",
         "catla_spawn": "Catla Spawn",
@@ -74,6 +102,11 @@ const translations = {
         // Contact Section
         "contact_title": "Contact Us",
         "contact_subtitle": "Get in touch for spawn orders and aquaculture consultations",
+        "contact_owner": "Owner",
+        "contact_phone": "Phone",
+        "contact_email": "Email",
+        "contact_address": "Address",
+        "contact_hours": "Hours",
         "owner": "Owner",
         "phone": "Phone",
         "email": "Email",
@@ -89,13 +122,18 @@ const translations = {
         
         // Footer
         "best_quality": "Best quality fish breeder & spawn supplier (All India).",
-        "quick_links": "Quick Links",
-        "contact_info": "Contact Info",
+        "footer_quick_links": "Quick Links",
+        "footer_contact_info": "Contact Info",
         "all_rights_reserved": "All rights reserved."
     },
     
     hi: {
         // Navigation
+        "nav_home": "होम",
+        "nav_about": "हमारे बारे में",
+        "nav_products": "उत्पाद",
+        "nav_youtube": "यूट्यूब",
+        "nav_contact": "संपर्क",
         "home": "होम",
         "about": "हमारे बारे में",
         "products": "उत्पाद",
@@ -130,8 +168,31 @@ const translations = {
         "view_google_maps": "Google Maps पर देखें",
         
         // Products Section
-        "products_title": "हमारे उत्पाद",
+        "our_products": "हमारे उत्पाद",
         "products_subtitle": "हम सभी प्रकार के स्पॉन का उत्पादन करते हैं: सिल्वर कार्प, बटा, ग्रास कार्प, आदि",
+        "products_title": "हमारे उत्पाद",
+        // Product Categories
+        "category_fish": "मछली",
+        "category_eggs": "अंडे",
+        "category_spawns": "स्पॉन",
+        
+        // Fish Products
+        "rohu_fish": "रोहू मछली",
+        "rohu_fish_desc": "वाणिज्यिक मछली पालन के लिए उच्च गुणवत्ता वाली रोहू (लाबियो रोहिता) मछली",
+        "catla_fish": "कतला मछली",
+        "catla_fish_desc": "पॉलीकल्चर सिस्टम के लिए प्रीमियम कतला (कतला कतला) मछली",
+        "mrigal_fish": "मृगल मछली",
+        "mrigal_fish_desc": "पारंपरिक खेती के लिए गुणवत्तापूर्ण मृगल (सिरहिनस मृगला) मछली",
+        "puti_fish": "पुटी मछली",
+        "puti_fish_desc": "तालाबों और टैंकों में स्टॉकिंग के लिए स्वस्थ पुटी मछली",
+        
+        // Egg Products
+        "fish_eggs": "मछली के अंडे",
+        "fish_eggs_desc": "प्रजनन और जलीय कृषि उद्देश्यों के लिए ताजे मछली के अंडे",
+        "fertilized_eggs": "निषेचित अंडे",
+        "fertilized_eggs_desc": "हैचरी संचालन के लिए उच्च गुणवत्ता वाले निषेचित मछली के अंडे",
+        
+        // Spawn Products
         "rohu_spawn": "रोहू स्पॉन",
         "rohu_spawn_desc": "वाणिज्यिक मछली पालन के लिए उच्च गुणवत्ता वाला रोहू (लाबियो रोहिता) स्पॉन",
         "catla_spawn": "कतला स्पॉन",
@@ -168,6 +229,11 @@ const translations = {
         // Contact Section
         "contact_title": "हमसे संपर्क करें",
         "contact_subtitle": "स्पॉन ऑर्डर और जलीय कृषि परामर्श के लिए संपर्क करें",
+        "contact_owner": "मालिक",
+        "contact_phone": "फोन",
+        "contact_email": "ईमेल",
+        "contact_address": "पता",
+        "contact_hours": "कार्य समय",
         "owner": "मालिक",
         "phone": "फोन",
         "email": "ईमेल",
@@ -183,13 +249,18 @@ const translations = {
         
         // Footer
         "best_quality": "सर्वोत्तम गुणवत्ता वाला मछली प्रजनक और स्पॉन आपूर्तिकर्ता (पूरे भारत में)।",
-        "quick_links": "त्वरित लिंक",
-        "contact_info": "संपर्क जानकारी",
+        "footer_quick_links": "त्वरित लिंक",
+        "footer_contact_info": "संपर्क जानकारी",
         "all_rights_reserved": "सर्वाधिकार सुरक्षित।"
     },
     
     bn: {
         // Navigation
+        "nav_home": "হোম",
+        "nav_about": "আমাদের সম্পর্কে",
+        "nav_products": "পণ্য",
+        "nav_youtube": "ইউটিউব",
+        "nav_contact": "যোগাযোগ",
         "home": "হোম",
         "about": "আমাদের সম্পর্কে",
         "products": "পণ্য",
@@ -224,8 +295,31 @@ const translations = {
         "view_google_maps": "Google Maps-এ দেখুন",
         
         // Products Section
-        "products_title": "আমাদের পণ্য",
+        "our_products": "আমাদের পণ্য",
         "products_subtitle": "আমরা সব ধরনের স্পন উৎপাদন করি: সিলভার কার্প, বাটা, গ্রাস কার্প, ইত্যাদি",
+        "products_title": "আমাদের পণ্য",
+        // Product Categories
+        "category_fish": "মাছ",
+        "category_eggs": "ডিম",
+        "category_spawns": "স্পন",
+        
+        // Fish Products
+        "rohu_fish": "রুই মাছ",
+        "rohu_fish_desc": "বাণিজ্যিক মাছ চাষের জন্য উচ্চ মানের রুই (লাবিও রোহিতা) মাছ",
+        "catla_fish": "কাতলা মাছ",
+        "catla_fish_desc": "পলিকালচার সিস্টেমের জন্য প্রিমিয়াম কাতলা (কাতলা কাতলা) মাছ",
+        "mrigal_fish": "মৃগেল মাছ",
+        "mrigal_fish_desc": "ঐতিহ্যগত চাষের জন্য মানসম্পন্ন মৃগেল (সিরহিনাস মৃগলা) মাছ",
+        "puti_fish": "পুঁটি মাছ",
+        "puti_fish_desc": "পুকুর এবং ট্যাঙ্কে স্টকিংয়ের জন্য সুস্থ পুঁটি মাছ",
+        
+        // Egg Products
+        "fish_eggs": "মাছের ডিম",
+        "fish_eggs_desc": "প্রজনন এবং জলজ কৃষি উদ্দেশ্যে তাজা মাছের ডিম",
+        "fertilized_eggs": "নিষিক্ত ডিম",
+        "fertilized_eggs_desc": "হ্যাচারি কার্যক্রমের জন্য উচ্চ মানের নিষিক্ত মাছের ডিম",
+        
+        // Spawn Products
         "rohu_spawn": "রুই স্পন",
         "rohu_spawn_desc": "বাণিজ্যিক মাছ চাষের জন্য উচ্চ মানের রুই (লাবিও রোহিতা) স্পন",
         "catla_spawn": "কাতলা স্পন",
@@ -262,6 +356,11 @@ const translations = {
         // Contact Section
         "contact_title": "আমাদের সাথে যোগাযোগ করুন",
         "contact_subtitle": "স্পন অর্ডার এবং জলজ কৃষি পরামর্শের জন্য যোগাযোগ করুন",
+        "contact_owner": "মালিক",
+        "contact_phone": "ফোন",
+        "contact_email": "ইমেইল",
+        "contact_address": "ঠিকানা",
+        "contact_hours": "কাজের সময়",
         "owner": "মালিক",
         "phone": "ফোন",
         "email": "ইমেইল",
@@ -277,8 +376,8 @@ const translations = {
         
         // Footer
         "best_quality": "সেরা মানের মাছ প্রজনক এবং স্পন সরবরাহকারী (সমগ্র ভারত জুড়ে)।",
-        "quick_links": "দ্রুত লিংক",
-        "contact_info": "যোগাযোগের তথ্য",
+        "footer_quick_links": "দ্রুত লিংক",
+        "footer_contact_info": "যোগাযোগের তথ্য",
         "all_rights_reserved": "সর্বস্বত্ব সংরক্ষিত।"
     }
 };
