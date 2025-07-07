@@ -86,16 +86,15 @@ const translations = {
         "youtube_title": "Our YouTube Channel",
         "youtube_subtitle": "Watch our latest videos on spawn production and aquaculture",
         "latest_videos": "Latest Videos",
-        "latest_videos_subtitle": "Watch our latest cooking tutorials, fishing adventures, and product showcases",
+        "latest_videos_subtitle": "Watch our latest spawn production videos, breeding techniques, and aquaculture practices",
         "youtube_info_title": "Jamuna Fisheries on YouTube",
         "youtube_info_text": "Subscribe to our channel for:",
-        "cooking_tutorials": "Cooking tutorials",
-        "fishing_adventures": "Fishing adventures",
-        "product_showcases": "Product showcases",
-        "spawn_techniques": "Spawn production techniques",
-        "breeding_methods": "Fish breeding methods",
+        "spawn_production": "Spawn production videos",
+        "breeding_techniques": "Fish breeding techniques",
         "aquaculture_practices": "Aquaculture best practices",
         "farm_management": "Farm management tips",
+        "fish_care": "Fish health care",
+        "pond_management": "Pond management",
         "subscribe_channel": "Subscribe to Our Channel",
         "visit_channel": "Visit our YouTube Channel",
         
@@ -124,7 +123,36 @@ const translations = {
         "best_quality": "Best quality fish breeder & spawn supplier (All India).",
         "footer_quick_links": "Quick Links",
         "footer_contact_info": "Contact Info",
-        "all_rights_reserved": "All rights reserved."
+        "all_rights_reserved": "All rights reserved.",
+        
+        // Additional
+        "for_more_videos": "for more videos and updates!",
+        "call_now": "Call Now",
+        "whatsapp": "WhatsApp",
+        "contact_information": "Contact Information",
+        
+        // Why Choose Section
+        "why_choose_title": "Why Choose Jamuna Fisheries?",
+        "reliable_production": "Reliable, Large-Scale Production",
+        "reliable_production_desc": "Consistent, high-volume spawn production to meet your business needs",
+        "scientific_broodstock": "Scientifically Managed Broodstock",
+        "scientific_broodstock_desc": "Expert care and management of breeding fish for optimal results",
+        "maximum_hatch": "Maximum Hatch Success",
+        "maximum_hatch_desc": "Proven methods ensuring the highest hatch rates for your investment",
+        "eco_friendly": "Eco-Friendly Practices",
+        "eco_friendly_desc": "Ethical, sustainable aquaculture methods that protect our environment",
+        
+        // Credibility Section
+        "credibility_text": "We are doing this business more than 50 years and we are Gov. Accredited.",
+        
+        // Who We Serve Section
+        "who_we_serve_title": "Who We Serve",
+        "fish_farm_owners": "Fish Farm Owners & Operators",
+        "fish_farm_owners_desc": "Reliable spawn supply for commercial fish farming operations",
+        "hatchery_businesses": "Hatchery & Aquaculture Businesses",
+        "hatchery_businesses_desc": "Premium quality broodstock and technical support",
+        "government_contracts": "Government & Private Contracts",
+        "government_contracts_desc": "Large-scale supply for institutional and corporate clients"
     },
     
     hi: {
@@ -213,16 +241,15 @@ const translations = {
         "youtube_title": "हमारा यूट्यूब चैनल",
         "youtube_subtitle": "स्पॉन उत्पादन और जलीय कृषि पर हमारे नवीनतम वीडियो देखें",
         "latest_videos": "नवीनतम वीडियो",
-        "latest_videos_subtitle": "हमारे नवीनतम कुकिंग ट्यूटोरियल, फिशिंग आदिवास, और उत्पाद देखें",
+        "latest_videos_subtitle": "हमारे नवीनतम स्पॉन उत्पादन वीडियो, प्रजनन तकनीक, और जलीय कृषि अभ्यास देखें",
         "youtube_info_title": "यूट्यूब पर जमुना फिशरीज",
         "youtube_info_text": "हमारे चैनल को सब्सक्राइब करें:",
-        "cooking_tutorials": "कुकिंग ट्यूटोरियल",
-        "fishing_adventures": "फिशिंग आदिवास",
-        "product_showcases": "उत्पाद देखें",
-        "spawn_techniques": "स्पॉन उत्पादन तकनीक",
-        "breeding_methods": "मछली प्रजनन विधियां",
+        "spawn_production": "स्पॉन उत्पादन वीडियो",
+        "breeding_techniques": "मछली प्रजनन तकनीक",
         "aquaculture_practices": "जलीय कृषि के सर्वोत्तम अभ्यास",
         "farm_management": "फार्म प्रबंधन टिप्स",
+        "fish_care": "मछली स्वास्थ्य देखभाल",
+        "pond_management": "तालाब प्रबंधन",
         "subscribe_channel": "हमारे चैनल को सब्सक्राइब करें",
         "visit_channel": "हमारा यूट्यूब चैनल देखें",
         
@@ -251,7 +278,36 @@ const translations = {
         "best_quality": "सर्वोत्तम गुणवत्ता वाला मछली प्रजनक और स्पॉन आपूर्तिकर्ता (पूरे भारत में)।",
         "footer_quick_links": "त्वरित लिंक",
         "footer_contact_info": "संपर्क जानकारी",
-        "all_rights_reserved": "सर्वाधिकार सुरक्षित।"
+        "all_rights_reserved": "सर्वाधिकार सुरक्षित।",
+        
+        // Additional
+        "for_more_videos": "अधिक वीडियो और अपडेट के लिए!",
+        "call_now": "अभी कॉल करें",
+        "whatsapp": "व्हाट्सऐप",
+        "contact_information": "संपर्क जानकारी",
+        
+        // Why Choose Section
+        "why_choose_title": "जमुना फिशरीज को क्यों चुनें?",
+        "reliable_production": "विश्वसनीय, बड़े पैमाने पर उत्पादन",
+        "reliable_production_desc": "आपकी व्यावसायिक आवश्यकताओं को पूरा करने के लिए निरंतर, उच्च मात्रा में स्पॉन उत्पादन",
+        "scientific_broodstock": "वैज्ञानिक रूप से प्रबंधित ब्रूडस्टॉक",
+        "scientific_broodstock_desc": "इष्टतम परिणामों के लिए प्रजनन मछलियों की विशेषज्ञ देखभाल और प्रबंधन",
+        "maximum_hatch": "अधिकतम हैच सफलता",
+        "maximum_hatch_desc": "आपके निवेश के लिए उच्चतम हैच दर सुनिश्चित करने वाली सिद्ध तकनीकें",
+        "eco_friendly": "पर्यावरण अनुकूल प्रथाएं",
+        "eco_friendly_desc": "हमारे पर्यावरण की रक्षा करने वाली नैतिक, स्थायी जलीय कृषि विधियां",
+        
+        // Credibility Section
+        "credibility_text": "हम 50 से अधिक वर्षों से यह व्यवसाय कर रहे हैं और हम सरकारी मान्यता प्राप्त हैं।",
+        
+        // Who We Serve Section
+        "who_we_serve_title": "हम किसकी सेवा करते हैं",
+        "fish_farm_owners": "मछली फार्म मालिक और संचालक",
+        "fish_farm_owners_desc": "वाणिज्यिक मछली पालन संचालन के लिए विश्वसनीय स्पॉन आपूर्ति",
+        "hatchery_businesses": "हैचरी और जलीय कृषि व्यवसाय",
+        "hatchery_businesses_desc": "प्रीमियम गुणवत्ता वाला ब्रूडस्टॉक और तकनीकी सहायता",
+        "government_contracts": "सरकारी और निजी अनुबंध",
+        "government_contracts_desc": "संस्थागत और कॉर्पोरेट ग्राहकों के लिए बड़े पैमाने पर आपूर्ति"
     },
     
     bn: {
@@ -278,9 +334,9 @@ const translations = {
         
         // About Section
         "about_title": "যমুনা ফিশারিজ সম্পর্কে",
-        "about_subtitle": "মাছের স্পন উৎপাদনে আপনার বিশ্বস্ত অংশীদার",
+        "about_subtitle": "মাছের স্পন উৎপাদনে আপনার বিশ্঵স্ত অংশীদার",
         "our_story": "আমাদের গল্প",
-        "our_story_text": "যমুনা ফিশারিজ, শ্রী আশীষ নন্দীর নেতৃত্বে, উচ্চ মানের মাছের স্পন এবং ফিঙ্গারলিং উৎপাদনে বিশেষজ্ঞ। আমরা জলজ কৃষি শিল্পকে সমর্থন করার জন্য প্রতিশ্রুতিবদ্ধ এবং উচ্চ মানের মাছের বীজ সরবরাহ করি যা সমগ্র ভারত জুড়ে সফল মাছ চাষের কার্যক্রম নিশ্চিত করে।",
+        "our_story_text": "যমুনা ফিশারিজ, শ্রী আশীষ নন্দীর নেতৃত্বে, উচ্চ মানের মাছের স্পন এবং ফিঙ্গারলিং উৎপাদনে বিশেষজ্ঞ। আমরা জলজ কৃষি শিল্পকে সমর্থন করার জন্য प্রতিশ্রুতিবদ্ধ এবং উচ্চ মানের মাছের বীজ সরবরাহ করি যা সমগ্র ভারত জুড়ে সফল মাছ চাষের কার্যক্রম নিশ্চিত করে।",
         "founder_owner": "প্রতিষ্ঠাতা এবং মালিক",
         "our_mission": "আমাদের মিশন",
         "our_mission_text": "প্রিমিয়াম মানের মাছের স্পন এবং ফিঙ্গারলিং উৎপাদন এবং সরবরাহ করে টেকসই জলজ কৃষি উন্নয়নে অবদান রাখা, মাছ চাষীদের আরও ভাল ফলন এবং লাভজনকতা অর্জনে সাহায্য করা।",
@@ -291,13 +347,13 @@ const translations = {
         "quality_assured": "মান নিশ্চিত",
         "quality_assured_desc": "কঠোর মানের মানদণ্ড",
         "find_us_google": "Google-এ আমাদের খুঁজুন",
-        "verified_business": "Google-এ আমাদের যাচাইকৃত ব্যবসার প্রোফাইল, পর্যালোচনা এবং দিকনির্দেশনা দেখুন।",
+        "verified_business": "Google-এ আমাদের যাচাইকৃত ব্যবসার প্রোফ়াইল, পর্যালোচনা এবং দিকনির্দেশনা দেখুন।",
         "view_google_maps": "Google Maps-এ দেখুন",
         
         // Products Section
-        "our_products": "আমাদের পণ্য",
-        "products_subtitle": "আমরা সব ধরনের স্পন উৎপাদন করি: সিলভার কার্প, বাটা, গ্রাস কার্প, ইত্যাদি",
-        "products_title": "আমাদের পণ্য",
+        "our_products": "হমাদের পণ্য",
+        "products_subtitle": "আমরা সব ধরনের স্পন উৎপাদন করি: সিলভার কার্প, বটা, গ্রাস কার্প, ইত্যাদি",
+        "products_title": "হমাদের পণ্য",
         // Product Categories
         "category_fish": "মাছ",
         "category_eggs": "ডিম",
@@ -328,28 +384,27 @@ const translations = {
         "mrigal_spawn_desc": "ঐতিহ্যগত চাষের জন্য মানসম্পন্ন মৃগেল (সিরহিনাস মৃগলা) স্পন",
         "silver_carp_spawn": "সিলভার কার্প স্পন",
         "silver_carp_spawn_desc": "পৃষ্ঠীয় খাদ্যের জন্য প্রিমিয়াম সিলভার কার্প (হাইপোফথ্যালমিকথিস মোলিট্রিক্স) স্পন",
-        "bata_spawn": "বাটা স্পন",
-        "bata_spawn_desc": "ঐতিহ্যগত জলজ কৃষি ব্যবস্থার জন্য মানসম্পন্ন বাটা (লাবিও বাটা) স্পন",
+        "bata_spawn": "বটা স্পন",
+        "bata_spawn_desc": "ঐতিহ্যগত জলজ কৃষি ব্যবস্থার জন্য মানসম্পন্ন বটা (লাবিও বটা) স্পন",
         "grass_carp_spawn": "গ্রাস কার্প স্পন",
         "grass_carp_spawn_desc": "আগাছা নিয়ন্ত্রণের জন্য প্রিমিয়াম গ্রাস কার্প (স্টেনোফ্যারিঙ্গোডন ইডেলা) স্পন",
         "fingerlings": "ফিঙ্গারলিং",
         "fingerlings_desc": "পুকুর এবং ট্যাঙ্কে স্টকিংয়ের জন্য সুস্থ ফিঙ্গারলিং",
-        "contact_pricing": "মূল্যের জন্য যোগাযোগ করুন",
+        "contact_pricing": "মূল্য কের জন্য যোগাযোগ করুন",
         
         // YouTube Section
         "youtube_title": "আমাদের ইউটিউব চ্যানেল",
         "youtube_subtitle": "স্পন উৎপাদন এবং জলজ কৃষি সম্পর্কে আমাদের সর্বশেষ ভিডিও দেখুন",
         "latest_videos": "নতুন ভিডিও",
-        "latest_videos_subtitle": "আমাদের নতুন কুকিং টিউটোরিয়াল, ফিশিং আদি঵াস এবং পণ্য দেখান",
+        "latest_videos_subtitle": "আমাদের নতুন স্পন উৎপাদন ভিডিও, প্রজনন কৌশল এবং জলজ কৃষি অনুশীলন দেখুন",
         "youtube_info_title": "ইউটিউবে যমুনা ফিশারিজ",
         "youtube_info_text": "আমাদের চ্যানেলে সাবস্ক্রাইব করুন:",
-        "cooking_tutorials": "কুকিং টিউটোরিয়াল",
-        "fishing_adventures": "ফিশিং আদি঵াস",
-        "product_showcases": "পণ্য দেখান",
-        "spawn_techniques": "স্পন উৎপাদন কৌশল",
-        "breeding_methods": "মাছ প্রজনন পদ্ধতি",
+        "spawn_production": "স্পন উৎপাদন ভিডিও",
+        "breeding_techniques": "মাছ প্রজনন কৌশল",
         "aquaculture_practices": "জলজ কৃষির সেরা অনুশীলন",
         "farm_management": "খামার ব্যবস্থাপনা টিপস",
+        "fish_care": "মাছের স্বাস্থ্য যত্ন",
+        "pond_management": "পুকুর ব্যবস্থাপনা",
         "subscribe_channel": "আমাদের চ্যানেলে সাবস্ক্রাইব করুন",
         "visit_channel": "আমাদের ইউটিউব চ্যানেল দেখুন",
         
@@ -372,97 +427,248 @@ const translations = {
         "your_message": "আপনার বার্তা (স্পন ধরন এবং পরিমাণ অন্তর্ভুক্ত করুন)",
         "send_message": "বার্তা পাঠান",
         "mon_sat": "সোম-শনি: সকাল ৮টা - রাত ৮টা",
-        "sunday": "রবিবার: সকাল ৯টা - সন্ধ্যা ৬টা",
+        "sunday": "রবিবার: সকাল ৯টা - শাম ৬টা",
         
         // Footer
         "best_quality": "সেরা মানের মাছ প্রজনক এবং স্পন সরবরাহকারী (সমগ্র ভারত জুড়ে)।",
-        "footer_quick_links": "দ্রুত লিংক",
+        "footer_quick_links": "ত্রুত লিংক",
         "footer_contact_info": "যোগাযোগের তথ্য",
-        "all_rights_reserved": "সর্বস্বত্ব সংরক্ষিত।"
+        "all_rights_reserved": "সর্বস্বত্ব সংরক্ষিত।",
+        
+        // Additional
+        "for_more_videos": "আরও ভিডিও এবং আপডেটের জন্য!",
+        "call_now": "এখনই কল করুন",
+        "whatsapp": "হোয়াটসঅ্যাপ",
+        "contact_information": "যোগাযোগের তথ্য",
+        
+        // Why Choose Section
+        "why_choose_title": "কেন যমুনা ফিশারিজ বেছে নেবেন?",
+        "reliable_production": "নির্ভরযোগ্য, বৃহৎ আকারের উৎপাদন",
+        "reliable_production_desc": "আপনার ব্যবসার চাহিদা পূরণের জন্য ধারাবাহিক, উচ্চ পরিমাণে স্পন উৎপাদন",
+        "scientific_broodstock": "বৈজ্ঞানিকভাবে পরিচালিত ব্রুডস্টক",
+        "scientific_broodstock_desc": "সর্বোত্তম ফলাফলের জন্য প্রজনন মাছের বিশেষজ্ঞ যত্ন এবং ব্যবস্থাপনা",
+        "maximum_hatch": "সর্বোচ্চ হ্যাচ সাফল্য",
+        "maximum_hatch_desc": "আপনার বিনিয়োগের জন্য সর্বোচ্চ হ্যাচ রেট নিশ্চিত করে প্রমাণিত পদ্ধতি",
+        "eco_friendly": "পরিবেশ বান্ধব অনুশীলন",
+        "eco_friendly_desc": "আমাদের পরিবেশ রক্ষা করে নৈতিক, টেকসই জলজ কৃষি পদ্ধতি",
+        
+        // Credibility Section
+        "credibility_text": "আমরা ৫০ বছরেরও বেশি সময় ধরে এই ব্যবসা করছি এবং আমরা সরকারি স্বীকৃত।",
+        
+        // Who We Serve Section
+        "who_we_serve_title": "আমরা কাদের সেবা করি",
+        "fish_farm_owners": "মাছের খামারের মালিক এবং পরিচালক",
+        "fish_farm_owners_desc": "বাণিজ্যিক মাছ চাষের কার্যক্রমের জন্য নির্ভরযোগ্য স্পন সরবরাহ",
+        "hatchery_businesses": "হ্যাচারি এবং জলজ কৃষি ব্যবসা",
+        "hatchery_businesses_desc": "প্রিমিয়াম মানের ব্রুডস্টক এবং প্রযুক্তিগত সহায়তা",
+        "government_contracts": "সরকারি এবং বেসরকারি চুক্তি",
+        "government_contracts_desc": "প্রতিষ্ঠানিক এবং কর্পোরেট ক্লায়েন্টদের জন্য বৃহৎ আকারের সরবরাহ"
     }
 };
 
-// Function to change language
-function changeLanguage(lang) {
-    // Store selected language in localStorage
-    localStorage.setItem('selectedLanguage', lang);
-    
-    // Update all translatable elements
-    updatePageContent(lang);
-}
+// Language management class
+class LanguageManager {
+    constructor() {
+        this.currentLanguage = 'en';
+        this.availableLanguages = Object.keys(translations);
+        this.init();
+    }
 
-// Function to update page content
-function updatePageContent(lang) {
-    const currentLang = translations[lang];
-    
-    // Update all elements with data-translate attribute
-    const translatableElements = document.querySelectorAll('[data-translate]');
-    translatableElements.forEach(element => {
-        const key = element.getAttribute('data-translate');
-        if (currentLang[key]) {
-            element.textContent = currentLang[key];
+    init() {
+        // Get saved language from localStorage or default to English
+        this.currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
+        
+        // Validate language
+        if (!this.availableLanguages.includes(this.currentLanguage)) {
+            this.currentLanguage = 'en';
         }
-    });
-    
-    // Update navigation links
-    const navLinks = {
-        'a[href="#home"]': 'home',
-        'a[href="#about"]': 'about',
-        'a[href="#products"]': 'products',
-        'a[href="#youtube"]': 'youtube',
-        'a[href="#contact"]': 'contact'
-    };
-    
-    Object.entries(navLinks).forEach(([selector, key]) => {
-        const element = document.querySelector(selector);
-        if (element && currentLang[key]) {
-            element.textContent = currentLang[key];
+        
+        // Set up event listeners
+        this.setupEventListeners();
+        
+        // Apply initial language
+        this.changeLanguage(this.currentLanguage);
+    }
+
+    setupEventListeners() {
+        // Language selector change event
+        const languageSelect = document.getElementById('languageSelect');
+        if (languageSelect) {
+            languageSelect.addEventListener('change', (e) => {
+                this.changeLanguage(e.target.value);
+            });
         }
-    });
-    
-    // Update section headers
-    const sectionHeaders = {
-        '#about .section-header h2': 'about_title',
-        '#about .section-header p': 'about_subtitle',
-        '#products .section-header h2': 'products_title',
-        '#products .section-header p': 'products_subtitle',
-        '#youtube .section-header h2': 'youtube_title',
-        '#youtube .section-header p': 'youtube_subtitle',
-        '#contact .section-header h2': 'contact_title',
-        '#contact .section-header p': 'contact_subtitle'
-    };
-    
-    Object.entries(sectionHeaders).forEach(([selector, key]) => {
-        const element = document.querySelector(selector);
-        if (element && currentLang[key]) {
-            element.textContent = currentLang[key];
+    }
+
+    changeLanguage(lang) {
+        try {
+            // Validate language
+            if (!this.availableLanguages.includes(lang)) {
+                console.warn(`Language '${lang}' not available, falling back to English`);
+                lang = 'en';
+            }
+
+            // Store selected language in localStorage
+            localStorage.setItem('selectedLanguage', lang);
+            this.currentLanguage = lang;
+            
+            // Update language selector
+            const languageSelect = document.getElementById('languageSelect');
+            if (languageSelect) {
+                languageSelect.value = lang;
+            }
+            
+            // Update all translatable elements
+            this.updatePageContent(lang);
+            
+            // Dispatch custom event for other scripts
+            document.dispatchEvent(new CustomEvent('languageChanged', { 
+                detail: { language: lang } 
+            }));
+            
+        } catch (error) {
+            console.error('Error changing language:', error);
         }
-    });
-    
-    // Update form placeholders
-    const formElements = {
-        'input[type="text"]': 'your_name',
-        'input[type="email"]': 'your_email',
-        'input[type="tel"]': 'your_phone',
-        'textarea': 'your_message',
-        'button[type="submit"]': 'send_message'
-    };
-    
-    Object.entries(formElements).forEach(([selector, key]) => {
-        const element = document.querySelector(selector);
-        if (element && currentLang[key]) {
-            if (element.tagName === 'TEXTAREA' || element.tagName === 'INPUT') {
-                element.placeholder = currentLang[key];
+    }
+
+    updatePageContent(lang) {
+        const currentLang = translations[lang];
+        if (!currentLang) {
+            console.error(`Translation data not found for language: ${lang}`);
+            return;
+        }
+
+        // Update all elements with data-translate attribute
+        const translatableElements = document.querySelectorAll('[data-translate]');
+        translatableElements.forEach(element => {
+            const key = element.getAttribute('data-translate');
+            if (currentLang[key]) {
+                element.textContent = currentLang[key];
             } else {
+                console.warn(`Translation key '${key}' not found for language '${lang}'`);
+            }
+        });
+        
+        // Update navigation links
+        this.updateNavigationLinks(currentLang);
+        
+        // Update section headers
+        this.updateSectionHeaders(currentLang);
+        
+        // Update form elements
+        this.updateFormElements(currentLang);
+        
+        // Update dynamic content
+        this.updateDynamicContent(currentLang);
+    }
+
+    updateNavigationLinks(currentLang) {
+        const navLinks = {
+            'a[href="#home"]': 'home',
+            'a[href="#about"]': 'about',
+            'a[href="#products"]': 'products',
+            'a[href="#youtube"]': 'youtube',
+            'a[href="#contact"]': 'contact'
+        };
+        
+        Object.entries(navLinks).forEach(([selector, key]) => {
+            const element = document.querySelector(selector);
+            if (element && currentLang[key]) {
                 element.textContent = currentLang[key];
             }
+        });
+    }
+
+    updateSectionHeaders(currentLang) {
+        const sectionHeaders = {
+            '#about .section-header h2': 'about_title',
+            '#about .section-header p': 'about_subtitle',
+            '#products .section-header h2': 'products_title',
+            '#products .section-header p': 'products_subtitle',
+            '#youtube .section-header h2': 'youtube_title',
+            '#youtube .section-header p': 'youtube_subtitle',
+            '#contact .section-header h2': 'contact_title',
+            '#contact .section-header p': 'contact_subtitle'
+        };
+        
+        Object.entries(sectionHeaders).forEach(([selector, key]) => {
+            const element = document.querySelector(selector);
+            if (element && currentLang[key]) {
+                element.textContent = currentLang[key];
+            }
+        });
+    }
+
+    updateFormElements(currentLang) {
+        const formElements = {
+            'input[type="text"]': 'your_name',
+            'input[type="email"]': 'your_email',
+            'input[type="tel"]': 'your_phone',
+            'textarea': 'your_message',
+            'button[type="submit"]': 'send_message'
+        };
+        
+        Object.entries(formElements).forEach(([selector, key]) => {
+            const element = document.querySelector(selector);
+            if (element && currentLang[key]) {
+                if (element.tagName === 'TEXTAREA' || element.tagName === 'INPUT') {
+                    element.placeholder = currentLang[key];
+                } else {
+                    element.textContent = currentLang[key];
+                }
+            }
+        });
+    }
+
+    updateDynamicContent(currentLang) {
+        // Update any dynamically generated content
+        // This can be extended based on specific needs
+        
+        // Update news banner if it exists
+        const newsBanner = document.querySelector('.news-banner');
+        if (newsBanner && currentLang.news_offer) {
+            newsBanner.textContent = currentLang.news_offer;
         }
-    });
+        
+        // Update credibility text if it exists
+        const credibilityText = document.querySelector('.credibility-text');
+        if (credibilityText && currentLang.credibility_text) {
+            credibilityText.textContent = currentLang.credibility_text;
+        }
+    }
+
+    getCurrentLanguage() {
+        return this.currentLanguage;
+    }
+
+    getAvailableLanguages() {
+        return this.availableLanguages;
+    }
+
+    getTranslation(key, lang = null) {
+        const targetLang = lang || this.currentLanguage;
+        return translations[targetLang]?.[key] || key;
+    }
 }
 
-// Initialize language on page load
+// Global language manager instance
+let languageManager;
+
+// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
-    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
-    document.getElementById('languageSelect').value = savedLanguage;
-    updatePageContent(savedLanguage);
-}); 
+    languageManager = new LanguageManager();
+});
+
+// Legacy function for backward compatibility
+function changeLanguage(lang) {
+    if (languageManager) {
+        languageManager.changeLanguage(lang);
+    } else {
+        console.warn('Language manager not initialized yet');
+    }
+}
+
+// Export for use in other scripts
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { translations, LanguageManager, changeLanguage };
+} 

@@ -1,6 +1,11 @@
 User-agent: *
 Allow: /
 
+# Disallow any potential duplicate content
+Disallow: /*?
+Disallow: /*#
+Disallow: /index.html
+
 # Sitemap
 Sitemap: https://jamunafisheries.github.io/sitemap.xml
 

@@ -1,17 +1,54 @@
-// Mobile Navigation Toggle
+// Mobile Navigation Toggle - Enhanced with accessibility
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        
+        // Update ARIA attributes
+        const isExpanded = navMenu.classList.contains('active');
+        hamburger.setAttribute('aria-expanded', isExpanded);
+        
+        // Prevent body scroll when menu is open
+        if (isExpanded) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Close mobile menu when pressing Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
+    });
+}
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+        if (hamburger && navMenu) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
     });
 });
 
@@ -269,6 +306,41 @@ document.addEventListener('DOMContentLoaded', () => {
                 closeContactModal();
             }
         });
+        
+        // Prevent modal content clicks from closing the modal
+        const modalContent = contactModal.querySelector('.modal-content');
+        if (modalContent) {
+            modalContent.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+        }
+        
+        // Add touch event support for mobile
+        contactModal.addEventListener('touchstart', (e) => {
+            if (e.target === contactModal) {
+                closeContactModal();
+            }
+        });
+        
+        // Add swipe-to-close functionality for mobile
+        let startY = 0;
+        let currentY = 0;
+        
+        contactModal.addEventListener('touchstart', (e) => {
+            startY = e.touches[0].clientY;
+        });
+        
+        contactModal.addEventListener('touchmove', (e) => {
+            currentY = e.touches[0].clientY;
+        });
+        
+        contactModal.addEventListener('touchend', (e) => {
+            const diffY = startY - currentY;
+            // If swiped up more than 100px, close the modal
+            if (diffY > 100 && contactModal.classList.contains('active')) {
+                closeContactModal();
+            }
+        });
     }
     
     // Video modal functionality
@@ -411,6 +483,13 @@ function closeContactModal() {
     if (contactModal) {
         contactModal.classList.remove('active');
         document.body.style.overflow = 'auto';
+        
+        // Add a small delay to ensure smooth transition
+        setTimeout(() => {
+            if (!contactModal.classList.contains('active')) {
+                contactModal.style.display = 'none';
+            }
+        }, 300);
     }
 }
 
@@ -475,4 +554,46 @@ function closeVideoModal() {
 
     // Responsive fix: show first slide on load
     showSlide(0);
-})(); 
+})();
+
+// News Banner Horizontal Scrolling
+document.addEventListener('DOMContentLoaded', function() {
+    const newsBanner = document.querySelector('.news-banner');
+    const newsContent = document.querySelector('.news-content');
+    
+    if (newsContent && newsBanner) {
+        // Ensure the animation is running
+        newsContent.style.animationPlayState = 'running';
+        
+        // Add hover pause functionality
+        newsBanner.addEventListener('mouseenter', function() {
+            newsContent.style.animationPlayState = 'paused';
+        });
+        
+        newsBanner.addEventListener('mouseleave', function() {
+            newsContent.style.animationPlayState = 'running';
+        });
+        
+        // Add touch pause for mobile devices
+        newsBanner.addEventListener('touchstart', function() {
+            newsContent.style.animationPlayState = 'paused';
+        });
+        
+        newsBanner.addEventListener('touchend', function() {
+            setTimeout(() => {
+                newsContent.style.animationPlayState = 'running';
+            }, 1000); // Resume after 1 second
+        });
+        
+        // Force animation restart if it gets stuck
+        setInterval(() => {
+            if (newsContent.style.animationPlayState !== 'paused') {
+                newsContent.style.animation = 'none';
+                newsContent.offsetHeight; // Trigger reflow
+                newsContent.style.animation = 'horizontalScroll 15s linear infinite';
+            }
+        }, 15000); // Restart every 15 seconds
+        
+        console.log('News banner horizontal scrolling initialized successfully');
+    }
+}); 

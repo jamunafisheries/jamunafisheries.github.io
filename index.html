@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Jamuna Fisheries - Premium Fish Spawn & Fingerlings Supplier in Bankura, West Bengal | Mr. Ashis Nandi</title>
     <meta name="description" content="Jamuna Fisheries - Leading fish spawn and fingerlings supplier in Bankura, West Bengal. Premium Rohu, Catla, Mrigal, Silver Carp spawn. Contact Mr. Ashis Nandi at 9609673056. All India delivery available.">
     <meta name="keywords" content="Jamuna Fisheries, fish spawn supplier, fingerlings supplier, Bankura, West Bengal, Rohu spawn, Catla spawn, Mrigal spawn, Silver Carp spawn, fish farming, aquaculture, Mr. Ashis Nandi, fish seed production">
     <meta name="author" content="Mr. Ashis Nandi - Jamuna Fisheries">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="language" content="English">
     <meta name="geo.region" content="IN-WB">
     <meta name="geo.placename" content="Bankura, West Bengal">
@@ -32,17 +33,151 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://jamunafisheries.github.io/">
     
+    <!-- Additional SEO Meta Tags -->
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- DNS prefetching for external domains -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//www.youtube.com">
+    <link rel="dns-prefetch" href="//www.google.com">
+    <link rel="dns-prefetch" href="//maps.google.com">
     
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://www.google.com">
+    <link rel="preconnect" href="https://maps.google.com">
     
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/images/about-sign.jpeg" as="image" type="image/jpeg">
+    
+    <!-- Critical CSS inline - Minimal for above-the-fold only -->
+    <style>
+        /* Essential reset and base styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6; 
+            color: #1e293b;
+            background: #f3f4f6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Critical navbar styles */
+        .navbar { 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            background: #1e40af; 
+            z-index: 1000; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 1rem 2rem; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        
+        .nav-logo { 
+            display: flex; 
+            align-items: center; 
+            gap: 0.5rem; 
+            font-weight: 700; 
+            color: #fff; 
+            font-size: 1.6rem;
+        }
+        
+        .nav-menu { 
+            display: flex; 
+            list-style: none; 
+            gap: 2rem; 
+            margin: 0; 
+            padding: 0; 
+        }
+        
+        .nav-menu a { 
+            text-decoration: none; 
+            color: #fff; 
+            font-weight: 600; 
+            transition: color 0.3s ease; 
+            padding: 6px 12px;
+            border-radius: 8px;
+        }
+        
+        .nav-menu a:hover { 
+            color: #22d3ee; 
+            background: rgba(255,255,255,0.10);
+        }
+        
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 4px; }
+        .hamburger span { width: 28px; height: 3px; background: #fff; border-radius: 2px; transition: 0.3s; }
+        
+        /* Hero section - Critical layout */
+        .hero { height: 70vh; position: relative; overflow: hidden; }
+        .hero-slider-wrapper { height: 100%; width: 100%; position: relative; }
+        .slider { position: relative; height: 100%; width: 100%; overflow: hidden; background: transparent; }
+        .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); overflow: hidden; }
+        .slide.active { opacity: 1; }
+        .slide img { width: 100%; height: 100%; object-fit: cover; transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+        
+        /* Main welcome - Critical content */
+        .main-welcome { text-align: center; padding: 4rem 2rem; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); }
+        
+        /* Essential mobile responsive */
+        @media (max-width: 768px) { 
+            .nav-container { padding: 0.75rem 1rem; }
+            .nav-logo { font-size: 1.4rem; }
+            .nav-menu { display: none; position: fixed; left: -100%; top: 70px; flex-direction: column; background: #1e40af; width: 100%; text-align: center; transition: 0.3s; padding: 2rem 0; z-index: 1001; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+            .nav-menu.active { left: 0; display: flex; }
+            .nav-menu a { padding: 1rem 2rem; font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+            .hamburger { display: flex; } 
+            .main-welcome { padding: 3rem 1rem; }
+            .hero { height: 60vh; }
+        }
+        
+        @media (max-width: 480px) {
+            .nav-container { padding: 0.5rem 1rem; }
+            .nav-logo { font-size: 1.2rem; }
+            .main-welcome { padding: 2rem 1rem; }
+            .hero { height: 50vh; }
+        }
+    </style>
+    
+    <!-- Non-critical CSS loaded asynchronously -->
+    <link rel="preload" href="assets/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/styles.css"></noscript>
+    
+    <!-- Mobile-specific meta tags for better performance -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Jamuna Fisheries">
+    
+    <!-- Additional critical image preload for mobile -->
+    <link rel="preload" href="assets/images/about-banner.jpeg" as="image" type="image/jpeg">
+    
+    <!-- Fonts loaded with display=swap for better performance -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Font Awesome loaded asynchronously -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
     
     <!-- Structured Data for Local Business -->
     <script type="application/ld+json">
@@ -114,6 +249,27 @@
         }
     }
     </script>
+    
+    <!-- Additional Structured Data for Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Jamuna Fisheries",
+        "url": "https://jamunafisheries.github.io",
+        "logo": "https://jamunafisheries.github.io/assets/images/about-sign.jpeg",
+        "sameAs": [
+            "https://www.youtube.com/@JamunaFisheries"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+919609673056",
+            "contactType": "customer service",
+            "areaServed": "IN",
+            "availableLanguage": ["English", "Hindi", "Bengali"]
+        }
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -123,139 +279,287 @@
                 <i class="fas fa-fish"></i>
                 <span>Jamuna Fisheries</span>
             </div>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" data-translate="nav_home">Home</a></li>
                 <li><a href="#about" data-translate="nav_about">About</a></li>
                 <li><a href="#products" data-translate="nav_products">Products</a></li>
                 <li><a href="#youtube" data-translate="nav_youtube">YouTube</a></li>
                 <li><a href="#contact" data-translate="nav_contact">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-controls">
+                <div class="language-selector-nav">
+                    <i class="fas fa-globe" aria-hidden="true"></i>
+                    <select id="languageSelect" onchange="changeLanguage(this.value)" aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="hi">हिंदी</option>
+                        <option value="bn">বাংলা</option>
+                    </select>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu" type="button">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Language Selector -->
-    <div class="language-selector-section">
-        <div class="language-selector-container">
-            <i class="fas fa-globe"></i>
-            <select id="languageSelect" onchange="changeLanguage(this.value)">
-                <option value="en">English</option>
-                <option value="hi">हिंदी</option>
-                <option value="bn">বাংলা</option>
-            </select>
-        </div>
-    </div>
-
     <!-- News Update Banner -->
-    <div class="news-banner">
-        <div class="news-content">
-            <i class="fas fa-star"></i>
+    <div class="news-banner" role="banner" aria-label="Special offers and announcements">
+        <marquee class="news-content" behavior="scroll" direction="left" scrollamount="5" scrolldelay="30">
+            <i class="fas fa-star" aria-hidden="true"></i>
             <span class="news-text" data-translate="news_offer">
                 🎉 Special Offer: Bulk orders available for all spawn types! Contact us for wholesale pricing. 📞 Call: 9609673056 / 9434653910 🚚 All India delivery available
             </span>
-        </div>
+        </marquee>
     </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-slider-wrapper">
-            <div class="slider" id="hero-slider">
-                <div class="slide active">
-                    <img src="assets/images/about-sign.jpeg" alt="Jamuna Fisheries Signboard">
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero" aria-label="Welcome to Jamuna Fisheries">
+            <div class="hero-slider-wrapper">
+                <div class="slider" id="hero-slider" role="region" aria-roledescription="carousel" aria-label="Company showcase images">
+                    <div class="slide active" role="group" aria-roledescription="slide" aria-label="1 of 2">
+                        <img src="assets/images/about-sign.jpeg" alt="Jamuna Fisheries Signboard" loading="eager" fetchpriority="high">
+                    </div>
+                    <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 2">
+                        <img src="assets/images/about-banner.jpeg" alt="Jamuna Fisheries Business Card" loading="lazy">
+                    </div>
+                    <button class="slider-arrow prev" aria-label="Previous slide" type="button">&#10094;</button>
+                    <button class="slider-arrow next" aria-label="Next slide" type="button">&#10095;</button>
+                    <div class="slider-dots" role="tablist" aria-label="Slide navigation">
+                        <button class="dot active" role="tab" aria-selected="true" aria-label="Go to slide 1" type="button"></button>
+                        <button class="dot" role="tab" aria-selected="false" aria-label="Go to slide 2" type="button"></button>
+                    </div>
                 </div>
-                <div class="slide">
-                    <img src="assets/images/about-banner.jpeg" alt="Jamuna Fisheries Business Card">
+            </div>
+        </section>
+
+        <div class="main-welcome">
+            <div class="container">
+                <!-- Main Headline -->
+                <div class="section-header">
+                    <h1 data-translate="welcome_title" class="welcome-title">
+                        Welcome to Jamuna Fisheries 🏞️
+                    </h1>
+                    <h2 class="welcome-subtitle">
+                        A trusted name in scientific and sustainable fish breeding
+                    </h2>
                 </div>
-                <!-- Add more slides here if you have more images -->
-                <button class="slider-arrow prev" aria-label="Previous slide">&#10094;</button>
-                <button class="slider-arrow next" aria-label="Next slide">&#10095;</button>
-                <div class="slider-dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
+
+                <!-- COMBINED CARD 1: Main Introduction & Credibility -->
+                <div class="welcome-combined-main">
+                    <div class="welcome-intro">
+                        <h3 class="welcome-intro-title">🐟 Premium Fish Spawn Production</h3>
+                        <p class="welcome-intro-text" data-translate="welcome_subtitle">
+                            We specialize in hormone-induced spawning techniques 💉🐠 to deliver high-quality, healthy fish spawn at scale 🐟🧬.
+                        </p>
+                        <div class="welcome-credibility">
+                            <div class="welcome-credibility-item">
+                                <i class="fas fa-award"></i>
+                                <span data-translate="credibility_text">We are doing this business more than 50 years and we are Gov. Accredited.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COMBINED CARD 2: Why Choose Us -->
+                <div class="welcome-combined-features">
+                    <h4 class="welcome-card-header">
+                        <i class="fas fa-star" style="color: #fbbf24; margin-right: 0.75rem;"></i>
+                        <span data-translate="why_choose_title">Why Choose Jamuna Fisheries?</span>
+                    </h4>
+                    <div class="welcome-excellence-grid">
+                        <div class="welcome-excellence-item">
+                            <span class="welcome-excellence-icon">✅</span>
+                            <div class="welcome-excellence-text">
+                                <strong data-translate="reliable_production">Reliable, Large-Scale Production</strong>
+                                <span data-translate="reliable_production_desc">Consistent, high-volume spawn production to meet your business needs</span>
+                            </div>
+                        </div>
+                        <div class="welcome-excellence-item">
+                            <span class="welcome-excellence-icon">✅</span>
+                            <div class="welcome-excellence-text">
+                                <strong data-translate="scientific_broodstock">Scientifically Managed Broodstock</strong>
+                                <span data-translate="scientific_broodstock_desc">Expert care and management of breeding fish for optimal results</span>
+                            </div>
+                        </div>
+                        <div class="welcome-excellence-item">
+                            <span class="welcome-excellence-icon">✅</span>
+                            <div class="welcome-excellence-text">
+                                <strong data-translate="maximum_hatch">Maximum Hatch Success</strong>
+                                <span data-translate="maximum_hatch_desc">Proven methods ensuring the highest hatch rates for your investment</span>
+                            </div>
+                        </div>
+                        <div class="welcome-excellence-item">
+                            <span class="welcome-excellence-icon">✅</span>
+                            <div class="welcome-excellence-text">
+                                <strong data-translate="eco_friendly">Eco-Friendly Practices 🌱</strong>
+                                <span data-translate="eco_friendly_desc">Ethical, sustainable aquaculture methods that protect our environment</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COMBINED CARD 3: Location & Recognition -->
+                <div class="welcome-combined-location">
+                    <h4 class="welcome-card-header">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Our Location & Recognition
+                    </h4>
+                    <div class="welcome-location-content">
+                        <div class="welcome-location-info">
+                            <h5 class="welcome-location-title">📍 Located in Ramsagar, Bankura, West Bengal</h5>
+                            <p class="welcome-location-text">
+                                Recognized as one of India's leading fish hatcheries with over 50 years of expertise in sustainable aquaculture.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action Buttons -->
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary" data-translate="explore_products">Explore Products</a>
+                    <a href="#youtube" class="btn btn-secondary" data-translate="watch_videos">Watch Our Videos</a>
                 </div>
             </div>
         </div>
-    </section>
 
-    <div class="main-welcome">
-        <h1 data-translate="welcome_title">Welcome to Jamuna Fisheries</h1>
-        <p data-translate="welcome_subtitle">Premium fish spawn and fingerlings production, supporting sustainable aquaculture development</p>
-        <div class="hero-buttons">
-            <a href="#products" class="btn btn-primary" data-translate="explore_products">Explore Products</a>
-            <a href="#youtube" class="btn btn-secondary" data-translate="watch_videos">Watch Our Videos</a>
-        </div>
-    </div>
+
 
     <!-- About Section -->
-    <section id="about" class="about about-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-translate="about_title">About Jamuna Fisheries</h2>
-                <p data-translate="about_subtitle">Your trusted partner in fish spawn production</p>
+    <section id="about" class="about about-section" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); padding: clamp(2rem, 4vw, 6rem) 0; position: relative; overflow: hidden;">
+        <!-- Decorative Background -->
+        <div aria-hidden="true" style="position: absolute; inset: 0; z-index: 0; pointer-events: none;">
+            <div style="width: 100%; height: 100%; background: radial-gradient(circle at 25% 25%, rgba(30, 64, 175, 0.04) 0%, transparent 60%), radial-gradient(circle at 75% 75%, rgba(16, 185, 129, 0.04) 0%, transparent 60%);"></div>
+        </div>
+        <div class="container about-container" style="position: relative; z-index: 1; padding: 0 1rem;">
+            <!-- HERO/INTRO -->
+            <div class="section-header about-header" style="text-align: center; margin-bottom: clamp(2rem, 4vw, 4rem);">
+                <h2 data-translate="about_title" style="font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; color: #1e293b; margin-bottom: 1rem; letter-spacing: -0.02em; background: linear-gradient(135deg, #1e40af, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">About Jamuna Fisheries</h2>
+                <p data-translate="about_subtitle" style="font-size: clamp(1rem, 2.5vw, 1.3rem); color: #64748b; font-weight: 500; max-width: 600px; margin: 0 auto; line-height: 1.6;">Your trusted partner in fish spawn production</p>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3 data-translate="our_story">Our Story</h3>
-                    <p data-translate="our_story_text">Jamuna Fisheries, led by Mr. Ashis Nandi, specializes in the production of high-quality fish spawn and fingerlings. We are committed to supporting the aquaculture industry by providing superior fish seed that ensures successful fish farming operations across India.</p>
-                    
-                    <div class="owner-photo" style="margin: 2rem 0; text-align: center;">
-                        <img src="assets/images/owner-image.jpg" alt="Mr. Ashis Nandi - Owner of Jamuna Fisheries" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 4px solid #1e40af; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
-                        <h4 style="margin-top: 1rem; color: #1e40af; font-size: 1.2rem;">Mr. Ashis Nandi</h4>
-                        <p style="margin-top: 0.5rem; color: #666; font-style: italic; text-align: center;" data-translate="founder_owner">Founder & Owner</p>
-                    </div>
-                    
-                    <h3 data-translate="our_mission">Our Mission</h3>
-                    <p data-translate="our_mission_text">To contribute to sustainable aquaculture development by producing and supplying premium quality fish spawn and fingerlings, helping fish farmers achieve better yields and profitability.</p>
-                    
-                    <div class="features">
-                        <div class="feature">
-                            <i class="fas fa-seedling"></i>
-                            <h4 data-translate="quality_spawn">Quality Spawn</h4>
-                            <p data-translate="quality_spawn_desc">Premium fish seed production</p>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-microscope"></i>
-                            <h4 data-translate="breeding_excellence">Breeding Excellence</h4>
-                            <p data-translate="breeding_excellence_desc">Advanced breeding techniques</p>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-certificate"></i>
-                            <h4 data-translate="quality_assured">Quality Assured</h4>
-                            <p data-translate="quality_assured_desc">Rigorous quality standards</p>
+
+            <!-- COMBINED CARD 1: Leadership & Company Overview -->
+            <div class="about-combined-main">
+                <div style="display: grid; grid-template-columns: 1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start;">
+                    <!-- Leadership -->
+                    <div class="about-leadership">
+                        <img src="assets/images/owner-image.jpg" alt="Mr. Ashis Nandi - Owner of Jamuna Fisheries" loading="lazy" class="about-leader-image">
+                        <div class="about-leader-info">
+                            <h3 class="about-leader-name">Mr. Ashis Nandi</h3>
+                            <p data-translate="founder_owner" class="about-leader-title">Founder & Owner</p>
+                            <blockquote class="about-leader-quote">"With over <span class='about-leader-highlight'>50 years</span> of expertise, we blend tradition and science to empower aquaculture success."</blockquote>
                         </div>
                     </div>
-                    <div class="google-business" style="margin-top:2rem;">
-                        <a href="https://g.co/kgs/ogxYiVP" target="_blank" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:0.5rem;">
-                            <img src="https://www.google.com/images/branding/product/2x/maps_96in128dp.png" alt="Google Maps" style="height:24px;width:24px;vertical-align:middle;"> <span data-translate="find_us_google">Find Us on Google</span>
-                        </a>
-                        <p style="margin-top:0.5rem; display: flex; align-items: center; gap: 0.5rem; justify-content: center;">
-                            <i class="fas fa-star" style="color: #1e40af; font-size: 1.1rem;"></i>
-                            <span data-translate="verified_business">See our verified business profile, reviews, and directions on Google.</span>
-                        </p>
+
+                    <!-- Company Overview -->
+                    <div class="about-company-overview">
+                        <h4 class="about-company-title">🌊 Empowering Indian Aquaculture</h4>
+                        <p class="about-company-text">Jamuna Fisheries specializes in premium-quality spawn and fingerlings, trusted by thousands of fish farmers across India. Our Ramsagar, Bankura-based hatchery delivers outstanding results with hormone-induced breeding and modern science.</p>
+                        <p class="about-company-text tagline">We don't just supply fish seed — we empower successful aquaculture.</p>
                     </div>
                 </div>
-                <div class="about-image">
-                    <img src="assets/images/about-banner.jpeg" alt="Jamuna Fisheries Business Card" style="margin-bottom: 1.5rem; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
-                    <iframe src="https://www.youtube.com/embed/m6ldeDh5-JI?si=x1XXIaTbEjyHdf4g&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <div class="about-map" style="margin-top: 1.5rem;">
-                        <iframe 
-                            src="https://www.google.com/maps?q=Jamuna+Fisheries,+Vill+Mouchura,+Post+Teliberia,+Onda,+Bankura,+West+Bengal+722144&output=embed" 
-                            width="100%" 
-                            height="350" 
-                            style="border:0; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                        <p style="margin-top: 0.1rem; text-align: center; font-size: 0.9rem; color: #666;">
-                            <a href="https://maps.app.goo.gl/WA5pUZpHaAsAtnBD8" target="_blank" style="color: #1e40af; text-decoration: none;">
-                                <i class="fas fa-map-marker-alt"></i> View on Google Maps
+            </div>
+
+            <!-- COMBINED CARD 2: Business Info & Location -->
+            <div class="about-combined-info">
+                <h4 class="about-card-header">📋 Company Information & Location</h4>
+                <div style="display: grid; grid-template-columns: 1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start;">
+                    <!-- Business Card Image -->
+                    <div class="about-business-card">
+                        <img src="assets/images/about-banner.jpeg" alt="Jamuna Fisheries Business Card" class="about-business-card-image">
+                    </div>
+
+                    <!-- Location & Google Business -->
+                    <div class="about-location">
+                        <h5 class="about-location-title">📍 <span data-translate="find_us_google">Find Us on Google</span></h5>
+                        <iframe src="https://www.google.com/maps?q=Jamuna+Fisheries,+Vill+Mouchura,+Post+Teliberia,+Onda,+Bankura,+West+Bengal+722144&output=embed" class="about-location-map" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div style="text-align: center;">
+                            <a href="https://g.co/kgs/ogxYiVP" target="_blank" class="about-location-btn">
+                                <img src="https://www.google.com/images/branding/product/2x/maps_96in128dp.png" alt="Google Maps" class="about-location-icon"> 
+                                <span data-translate="view_google_maps">View on Google Maps</span>
                             </a>
-                        </p>
+                            <p class="about-location-text">
+                                <i class="fas fa-star" style="color: #1e40af; font-size: clamp(0.9rem, 2.5vw, 1rem);"></i>
+                                <span data-translate="verified_business">See our verified business profile, reviews, and directions on Google.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COMBINED CARD 3: Video, Strengths & Quality -->
+            <div class="about-combined-features">
+                <h4 class="about-card-header">🎯 Our Story, Excellence & Quality</h4>
+                <div style="display: grid; grid-template-columns: 1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start;">
+                    <!-- Video Story -->
+                    <div class="about-video-section">
+                        <h5 class="about-video-title">📹 Watch Our Story</h5>
+                        <div style="text-align: center;">
+                            <iframe src="https://www.youtube.com/embed/m6ldeDh5-JI?si=x1XXIaTbEjyHdf4g&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="about-video-iframe"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Strengths & Quality -->
+                    <div style="display: flex; flex-direction: column; gap: clamp(1.5rem, 4vw, 2rem);">
+                        <!-- Strengths -->
+                        <div class="about-excellence">
+                            <h5 class="about-excellence-title">🏆 Our Excellence</h5>
+                            <div class="about-excellence-grid">
+                                <div class="about-excellence-item">
+                                    <span class="about-excellence-icon">🎯</span>
+                                    <div class="about-excellence-text"><strong>Precision Breeding</strong><br><span>Expert care with scientific methodology</span></div>
+                                </div>
+                                <div class="about-excellence-item">
+                                    <span class="about-excellence-icon">🧬</span>
+                                    <div class="about-excellence-text"><strong>Science-Backed Techniques</strong><br><span>Proven methods with modern innovation</span></div>
+                                </div>
+                                <div class="about-excellence-item">
+                                    <span class="about-excellence-icon">🌱</span>
+                                    <div class="about-excellence-text"><strong>Sustainable Approach</strong><br><span>Quality-first with environmental care</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quality Assurance -->
+                        <div class="about-quality">
+                            <h5 class="about-quality-title">🔍 Quality Assurance Process</h5>
+                            <ol class="about-quality-list">
+                                <li>Premium Broodstock Selection</li>
+                                <li>Rigorous Testing & Certification</li>
+                                <li>Meticulous Batch Quality Checks</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COMBINED CARD 4: Who We Serve -->
+            <div class="about-combined-serve">
+                <h4 class="about-card-header serve-header"><i class="fas fa-users" style="color: #1e40af; margin-right: 0.5rem; font-size: clamp(1.1rem, 3vw, 1.3rem);"></i><span data-translate="who_we_serve_title">Who We Serve</span></h4>
+                <div class="about-serve-grid">
+                    <div class="about-serve-item">
+                        <span class="about-serve-icon">👨‍💼</span>
+                        <div>
+                            <h5 class="about-serve-title" data-translate="fish_farm_owners">Fish Farm Owners & Operators</h5>
+                            <span class="about-serve-desc" data-translate="fish_farm_owners_desc">Reliable spawn supply for commercial fish farming operations</span>
+                        </div>
+                    </div>
+                    <div class="about-serve-item">
+                        <span class="about-serve-icon">🏭</span>
+                        <div>
+                            <h5 class="about-serve-title" data-translate="hatchery_businesses">Hatchery & Aquaculture Businesses</h5>
+                            <span class="about-serve-desc" data-translate="hatchery_businesses_desc">Premium quality broodstock and technical support</span>
+                        </div>
+                    </div>
+                    <div class="about-serve-item">
+                        <span class="about-serve-icon">🌐</span>
+                        <div>
+                            <h5 class="about-serve-title" data-translate="government_contracts">Government & Private Contracts</h5>
+                            <span class="about-serve-desc" data-translate="government_contracts_desc">Large-scale supply for institutional and corporate clients</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -292,7 +596,7 @@
                     <div class="products-grid">
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/rohu-fish.jpg" alt="Rohu Fish" class="zoom-image">
+                                <img src="assets/images/rohu-fish.jpg" alt="Rohu Fish" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
@@ -305,7 +609,7 @@
                         </div>
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/catla-fish.jpg" alt="Catla Fish" class="zoom-image">
+                                <img src="assets/images/catla-fish.jpg" alt="Catla Fish" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
@@ -318,7 +622,7 @@
                         </div>
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/mrigal-fish.jpg" alt="Mrigal Fish" class="zoom-image">
+                                <img src="assets/images/mrigal-fish.jpg" alt="Mrigal Fish" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
@@ -331,7 +635,7 @@
                         </div>
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/puti-fish.jpg" alt="Puti Fish" class="zoom-image">
+                                <img src="assets/images/puti-fish.jpg" alt="Puti Fish" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
@@ -350,7 +654,7 @@
                     <div class="products-grid">
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/rohu-fish.jpg" alt="Fish Eggs" class="zoom-image">
+                                <img src="assets/images/rohu-fish.jpg" alt="Fish Eggs" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
@@ -363,7 +667,7 @@
                         </div>
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/catla-fish.jpg" alt="Fertilized Eggs" class="zoom-image">
+                                <img src="assets/images/catla-fish.jpg" alt="Fertilized Eggs" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
@@ -382,7 +686,7 @@
                     <div class="products-grid">
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/rohu-fish.jpg" alt="Rohu Spawn" class="zoom-image">
+                                <img src="assets/images/rohu-fish.jpg" alt="Rohu Spawn" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
@@ -395,7 +699,7 @@
                         </div>
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/catla-fish.jpg" alt="Catla Spawn" class="zoom-image">
+                                <img src="assets/images/catla-fish.jpg" alt="Catla Spawn" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
@@ -408,7 +712,7 @@
                         </div>
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/mrigal-fish.jpg" alt="Mrigal Spawn" class="zoom-image">
+                                <img src="assets/images/mrigal-fish.jpg" alt="Mrigal Spawn" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
@@ -421,7 +725,7 @@
                         </div>
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/silver-carp.jpg" alt="Silver Carp Spawn" class="zoom-image">
+                                <img src="assets/images/silver-carp.jpg" alt="Silver Carp Spawn" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
@@ -434,7 +738,7 @@
                         </div>
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/bata-fish.jpg" alt="Bata Spawn" class="zoom-image">
+                                <img src="assets/images/bata-fish.jpg" alt="Bata Spawn" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
@@ -447,7 +751,7 @@
                         </div>
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/grass-carp.jpg" alt="Grass Carp Spawn" class="zoom-image">
+                                <img src="assets/images/grass-carp.jpg" alt="Grass Carp Spawn" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
@@ -460,7 +764,7 @@
                         </div>
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/fingerlings.jpg" alt="Fingerlings" class="zoom-image">
+                                <img src="assets/images/fingerlings.jpg" alt="Fingerlings" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
@@ -485,201 +789,192 @@
                 <p data-translate="latest_videos_subtitle">Watch our latest cooking tutorials, fishing adventures, and product showcases</p>
             </div>
             
-            <!-- YouTube Channel Info -->
-            <div class="youtube-channel-info">
-                <div class="youtube-info">
-                    <h3 data-translate="youtube_info_title">Jamuna Fisheries on YouTube</h3>
-                    <p data-translate="youtube_info_text">Subscribe to our channel for:</p>
+            <!-- COMBINED CARD 1: YouTube Channel Info -->
+            <div class="youtube-combined-info">
+                <h4 class="youtube-card-header">
+                    <i class="fab fa-youtube"></i>
+                    <span data-translate="youtube_info_title">Jamuna Fisheries on YouTube</span>
+                </h4>
+                <div class="youtube-channel-content">
+                    <div class="youtube-channel-description">
+                        <p data-translate="youtube_info_text">Subscribe to our channel for:</p>
+                        <ul class="youtube-benefits-list">
+                            <li><i class="fas fa-check-circle"></i> <span>Fish spawn production tutorials</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span>Aquaculture best practices</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span>Behind-the-scenes content</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span>Expert tips and techniques</span></li>
+                        </ul>
+                    </div>
+                    <div class="youtube-channel-action">
+                        <a href="https://www.youtube.com/@JamunaFisheries" target="_blank" class="youtube-subscribe-btn">
+                            <i class="fab fa-youtube"></i>
+                            <span data-translate="subscribe_channel">Subscribe to Our Channel</span>
+                        </a>
+                        <p class="youtube-subscriber-count">Join our growing community of fish farming enthusiasts!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- COMBINED CARD 2: Featured Videos -->
+            <div class="youtube-combined-videos">
+                <h4 class="youtube-card-header">
+                    <i class="fas fa-play-circle"></i>
+                    Featured Videos
+                </h4>
+                <div class="youtube-videos-grid">
+                    <div class="video-item">
+                        <div class="video-embed">
+                            <iframe 
+                                width="100%" 
+                                height="315" 
+                                src="https://www.youtube.com/embed/wXcZjGIhBYE?si=_Y9DGJSct_kbQfrJ" 
+                                title="Grass Carp Spawn Production - Jamuna Fisheries" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-info">
+                            <h4>Grass Carp [Ctenopharyngodon idella] Spawn Production</h4>
+                            <p>Watch our Grass Carp spawn production process at Jamuna Fisheries in West Bengal, India</p>
+                        </div>
+                    </div>
                     
-                    <a href="https://www.youtube.com/@JamunaFisheries" target="_blank" class="youtube-subscribe-btn">
-                        <i class="fab fa-youtube"></i>
-                        <span data-translate="subscribe_channel">Subscribe to Our Channel</span>
-                    </a>
-                </div>
-            </div>
-            
-            <!-- YouTube Videos Grid -->
-            <div class="youtube-videos-grid">
-                <div class="video-item">
-                    <div class="video-embed">
-                        <iframe 
-                            width="100%" 
-                            height="315" 
-                            src="https://www.youtube.com/embed/m6ldeDh5-JI?si=x1XXIaTbEjyHdf4g" 
-                            title="Jamuna Fisheries - Fish Cooking Tutorial" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen>
-                        </iframe>
+                    <div class="video-item">
+                        <div class="video-embed">
+                            <iframe 
+                                width="100%" 
+                                height="315" 
+                                src="https://www.youtube.com/embed/V6tqphlgA6Y?si=fBHeoealyGExchDR" 
+                                title="Japanese Punti Spawn Production - Jamuna Fisheries" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-info">
+                            <h4>Japanese Punti Spawn Production</h4>
+                            <p>Japanese Punti spawn production process at Jamuna Fishery in Ramsagar, West Bengal, India</p>
+                        </div>
                     </div>
-                    <div class="video-info">
-                        <h4>Fish Cooking Tutorial</h4>
-                        <p>Learn how to cook fresh fish with traditional Bengali recipes</p>
+                    
+                    <div class="video-item">
+                        <div class="video-embed">
+                            <iframe 
+                                width="100%" 
+                                height="315" 
+                                src="https://www.youtube.com/embed/G40J5WKKQVs?si=t3QWxhT2v9eXjEzJ" 
+                                title="Bata Fish Spawn Production - Jamuna Fisheries" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-info">
+                            <h4>Bata Fish [Labeo bata] Spawn Production</h4>
+                            <p>Bata Fish spawn production process at Jamuna Fishery in Ramsagar, West Bengal, India</p>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="video-item">
-                    <div class="video-embed">
-                        <iframe 
-                            width="100%" 
-                            height="315" 
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=example1" 
-                            title="Jamuna Fisheries - Spawn Production Process" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen>
-                        </iframe>
+                    
+                    <div class="video-item">
+                        <div class="video-embed">
+                            <iframe 
+                                width="100%" 
+                                height="315" 
+                                src="https://www.youtube.com/embed/PdfFJ6kG600?si=OzW1bsAgXgtCCwuM" 
+                                title="Indian Major Carp Spawn Production - Jamuna Fisheries" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-info">
+                            <h4>Indian Major Carp (IMC) Spawn Production</h4>
+                            <p>Indian major carp spawn production process at Jamuna Fisheries in Ramsagar, West Bengal, India</p>
+                        </div>
                     </div>
-                    <div class="video-info">
-                        <h4>Spawn Production Process</h4>
-                        <p>Behind the scenes of our quality spawn production facility</p>
+                    
+                    <div class="video-item">
+                        <div class="video-embed">
+                            <iframe 
+                                width="100%" 
+                                height="315" 
+                                src="https://www.youtube.com/embed/Ohogbs4qDVA?si=BvO2FbB6_a8z522p" 
+                                title="Rohu Spawn Production - Jamuna Fisheries" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-info">
+                            <h4>Rohu, Rui (Labeo rohita) Spawn Production</h4>
+                            <p>Rohu spawn production process at Jamuna Fishery in Ramsagar, West Bengal, India</p>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="video-item">
-                    <div class="video-embed">
-                        <iframe 
-                            width="100%" 
-                            height="315" 
-                            src="https://www.youtube.com/embed/jNQXAC9IVRw?si=example2" 
-                            title="Jamuna Fisheries - Fish Farming Tips" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen>
-                        </iframe>
+                    
+                    <div class="video-item">
+                        <div class="video-embed">
+                            <iframe 
+                                width="100%" 
+                                height="315" 
+                                src="https://www.youtube.com/embed/3A-7WprQDyM?si=l1-tcnkVwtYMqAZt" 
+                                title="Catla Fish Spawn Production - Jamuna Fisheries" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-info">
+                            <h4>Catla Fish [Catla catla] Spawn Production</h4>
+                            <p>Catla Fish spawn production process at Jamuna Fishery in Ramsagar, West Bengal, India</p>
+                        </div>
                     </div>
-                    <div class="video-info">
-                        <h4>Fish Farming Tips</h4>
-                        <p>Expert tips and techniques for successful fish farming</p>
-                    </div>
-                </div>
-                
-                <div class="video-item">
-                    <div class="video-embed">
-                        <iframe 
-                            width="100%" 
-                            height="315" 
-                            src="https://www.youtube.com/embed/9bZkp7q19f0?si=example3" 
-                            title="Jamuna Fisheries - Product Showcase" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="video-info">
-                        <h4>Product Showcase</h4>
-                        <p>Detailed showcase of our premium fish spawn and fingerlings</p>
-                    </div>
-                </div>
-                
-                <div class="video-item">
-                    <div class="video-embed">
-                        <iframe 
-                            width="100%" 
-                            height="315" 
-                            src="https://www.youtube.com/embed/kJQP7kiw5Fk?si=example4" 
-                            title="Jamuna Fisheries - Fishing Adventure" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="video-info">
-                        <h4>Fishing Adventure</h4>
-                        <p>Join us on exciting fishing adventures and expeditions</p>
-                    </div>
-                </div>
-                
-                <div class="video-item">
-                    <div class="video-embed">
-                        <iframe 
-                            width="100%" 
-                            height="315" 
-                            src="https://www.youtube.com/embed/ZZ5LpwO-An4?si=example5" 
-                            title="Jamuna Fisheries - Customer Testimonials" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="video-info">
-                        <h4>Customer Testimonials</h4>
-                        <p>Hear from our satisfied customers about their experience</p>
-                    </div>
-                </div>
-                
-                <div class="video-item">
-                    <div class="video-embed">
-                        <iframe 
-                            width="100%" 
-                            height="315" 
-                            src="https://www.youtube.com/embed/1uZJJ6XjoQw?si=example6" 
-                            title="Jamuna Fisheries - Pond Management" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="video-info">
-                        <h4>Pond Management</h4>
-                        <p>Essential techniques for maintaining healthy fish ponds</p>
-                    </div>
-                </div>
-                
-                <div class="video-item">
-                    <div class="video-embed">
-                        <iframe 
-                            width="100%" 
-                            height="315" 
-                            src="https://www.youtube.com/embed/8UFIYGkROII?si=example7" 
-                            title="Jamuna Fisheries - Fish Health Care" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="video-info">
-                        <h4>Fish Health Care</h4>
-                        <p>Important tips for maintaining fish health and preventing diseases</p>
-                    </div>
-                </div>
-                
-                <div class="video-item">
-                    <div class="video-embed">
-                        <iframe 
-                            width="100%" 
-                            height="315" 
-                            src="https://www.youtube.com/embed/3YxaaGgTQYM?si=example8" 
-                            title="Jamuna Fisheries - Business Success Story" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="video-info">
-                        <h4>Business Success Story</h4>
-                        <p>Our journey from a small fishery to a leading spawn supplier</p>
+                    
+                    <div class="video-item">
+                        <div class="video-embed">
+                            <iframe 
+                                width="100%" 
+                                height="315" 
+                                src="https://www.youtube.com/embed/JCiboGAqn_0?si=jpPLMfpxIOj26ZMB" 
+                                title="Pangas Fish Spawn Production - Jamuna Fisheries" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-info">
+                            <h4>Pangas Fish (Pangasius pangasius) Spawn Production</h4>
+                            <p>Spawn production process of Pangas fish in Bankura, West Bengal, India [HINDI]</p>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Channel Link -->
-            <div class="youtube-channel-link">
-                <div class="youtube-cta-container">
-                    <a href="https://www.youtube.com/@JamunaFisheries" target="_blank" class="youtube-cta-btn">
-                        <i class="fab fa-youtube"></i>
-                        <span data-translate="visit_channel">Visit our YouTube Channel</span>
-                    </a>
-                    <p class="youtube-cta-text">for more videos and updates!</p>
+            <!-- COMBINED CARD 3: Channel CTA -->
+            <div class="youtube-combined-cta">
+                <h4 class="youtube-card-header">
+                    <i class="fas fa-star"></i>
+                    More Content Awaits
+                </h4>
+                <div class="youtube-cta-content">
+                    <p class="youtube-cta-description">
+                        Discover more educational content, tutorials, and behind-the-scenes footage on our YouTube channel. 
+                        Stay updated with the latest in fish farming and aquaculture techniques.
+                    </p>
+                    <div class="youtube-cta-actions">
+                        <a href="https://www.youtube.com/@JamunaFisheries" target="_blank" class="youtube-cta-btn">
+                            <i class="fab fa-youtube"></i>
+                            <span data-translate="visit_channel">Visit our YouTube Channel</span>
+                        </a>
+                        <p class="youtube-cta-text">for more videos and updates!</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -749,6 +1044,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -775,10 +1071,22 @@
                 </div>
                 <div class="footer-section">
                     <h4 data-translate="footer_contact_info">Contact Info</h4>
-                    <p><i class="fas fa-user"></i> Mr. Ashis Nandi</p>
-                    <p><i class="fas fa-phone"></i> 9609673056 / 9434653910</p>
-                    <p><i class="fas fa-envelope"></i> nandiashis01@gmail.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Vill - Mouchura, Post - Teliberia, P.S. - Onda, Dist - Bankura (WB), Pin - 722144, Rail Station - Bishnupur</p>
+                    <div class="contact-info-item">
+                        <i class="fas fa-user"></i>
+                        <span>Mr. Ashis Nandi</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone"></i>
+                        <span><a href="tel:9609673056">9609673056</a> / <a href="tel:9434653910">9434653910</a></span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span><a href="mailto:nandiashis01@gmail.com">nandiashis01@gmail.com</a></span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Vill - Mouchura, Post - Teliberia, P.S. - Onda, Dist - Bankura (WB), Pin - 722144, Rail Station - Bishnupur</span>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -788,23 +1096,24 @@
     </footer>
 
     <!-- Image Modal -->
-    <div class="image-modal" id="imageModal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()">
-                <i class="fas fa-times"></i>
+    <div class="image-modal" id="imageModal" role="dialog" aria-labelledby="modalImageTitle" aria-modal="true" aria-hidden="true">
+        <div class="modal-content" role="document">
+            <button class="modal-close" onclick="closeModal()" aria-label="Close image modal" type="button">
+                <i class="fas fa-times" aria-hidden="true"></i>
             </button>
-            <img class="modal-image" id="modalImage" src="" alt="">
+            <img class="modal-image" id="modalImage" src="" alt="" aria-describedby="modalImageTitle">
+            <div id="modalImageTitle" class="sr-only"></div>
         </div>
     </div>
 
     <!-- Contact Info Modal -->
-    <div class="contact-modal" id="contactModal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeContactModal()">
-                <i class="fas fa-times"></i>
+    <div class="contact-modal" id="contactModal" role="dialog" aria-labelledby="contactModalTitle" aria-modal="true" aria-hidden="true">
+        <div class="modal-content" role="document">
+            <button class="modal-close" onclick="closeContactModal()" aria-label="Close contact information modal" type="button">
+                <i class="fas fa-times" aria-hidden="true"></i>
             </button>
             <div class="contact-modal-content">
-                <h3><i class="fas fa-phone"></i> Contact Information</h3>
+                <h3 id="contactModalTitle"><i class="fas fa-phone" aria-hidden="true"></i> Contact Information</h3>
                 <div class="contact-details">
                     <div class="contact-detail-item">
                         <i class="fas fa-user"></i>
@@ -856,10 +1165,10 @@
     </div>
 
     <!-- Video Modal -->
-    <div class="video-modal" id="videoModal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeVideoModal()">
-                <i class="fas fa-times"></i>
+    <div class="video-modal" id="videoModal" role="dialog" aria-labelledby="modalVideoTitle" aria-modal="true" aria-hidden="true">
+        <div class="modal-content" role="document">
+            <button class="modal-close" onclick="closeVideoModal()" aria-label="Close video modal" type="button">
+                <i class="fas fa-times" aria-hidden="true"></i>
             </button>
             <div class="video-modal-content">
                 <div class="video-container">
@@ -873,7 +1182,48 @@
         </div>
     </div>
 
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/translations.js"></script>
+    <!-- Optimized JavaScript loading -->
+    <script src="assets/js/translations.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+    
+    <!-- Performance monitoring and accessibility improvements -->
+    <script>
+        // Performance monitoring
+        window.addEventListener('load', function() {
+            if ('performance' in window) {
+                const perfData = performance.getEntriesByType('navigation')[0];
+                console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+                console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms');
+            }
+        });
+        
+        // Add skip link for keyboard navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const skipLink = document.createElement('a');
+            skipLink.href = '#main-content';
+            skipLink.textContent = 'Skip to main content';
+            skipLink.className = 'skip-link';
+            skipLink.style.cssText = `
+                position: absolute;
+                top: -40px;
+                left: 6px;
+                background: #1e40af;
+                color: white;
+                padding: 8px 16px;
+                text-decoration: none;
+                border-radius: 4px;
+                z-index: 10000;
+                transition: top 0.3s;
+                font-weight: 600;
+            `;
+            skipLink.addEventListener('focus', function() {
+                this.style.top = '6px';
+            });
+            skipLink.addEventListener('blur', function() {
+                this.style.top = '-40px';
+            });
+            document.body.insertBefore(skipLink, document.body.firstChild);
+        });
+    </script>
 </body>
 </html> 
