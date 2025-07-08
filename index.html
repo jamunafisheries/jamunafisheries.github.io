@@ -18,7 +18,7 @@
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Jamuna Fisheries - Premium Fish Spawn & Fingerlings Supplier in Bankura, West Bengal">
     <meta property="og:description" content="Leading fish spawn and fingerlings supplier in Bankura, West Bengal. Premium Rohu, Catla, Mrigal, Silver Carp spawn. Contact Mr. Ashis Nandi at 9609673056. All India delivery available.">
-    <meta property="og:image" content="https://jamunafisheries.github.io/assets/images/about-sign.jpeg">
+    <meta property="og:image" content="https://jamunafisheries.github.io/assets/images/business-card.webp">
     <meta property="og:url" content="https://jamunafisheries.github.io/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Jamuna Fisheries">
@@ -28,7 +28,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Jamuna Fisheries - Premium Fish Spawn & Fingerlings Supplier in Bankura, West Bengal">
     <meta name="twitter:description" content="Leading fish spawn and fingerlings supplier in Bankura, West Bengal. Premium Rohu, Catla, Mrigal, Silver Carp spawn. Contact Mr. Ashis Nandi at 9609673056.">
-    <meta name="twitter:image" content="https://jamunafisheries.github.io/assets/images/about-sign.jpeg">
+    <meta name="twitter:image" content="https://jamunafisheries.github.io/assets/images/business-card.webp">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://jamunafisheries.github.io/">
@@ -36,9 +36,35 @@
     <!-- Additional SEO Meta Tags -->
     <meta name="googlebot" content="index, follow">
     <meta name="bingbot" content="index, follow">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="revisit-after" content="7 days">
+    <meta name="expires" content="never">
+    
+    <!-- Structured Data for Better SEO -->
+    <meta name="business.name" content="Jamuna Fisheries">
+    <meta name="business.type" content="Fish Spawn & Fingerlings Supplier">
+    <meta name="business.owner" content="Mr. Ashis Nandi">
+    <meta name="business.phone" content="9609673056">
+    <meta name="business.email" content="nandiashis01@gmail.com">
+    <meta name="business.address" content="Vill - Mouchura, Post - Teliberia, Onda, Bankura, West Bengal 722144">
+    
+    <!-- Performance Optimization -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#1e40af">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Jamuna Fisheries">
+    <link rel="apple-touch-icon" href="assets/images/business-card.webp">
     
     <!-- DNS prefetching for external domains -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -57,7 +83,7 @@
     <link rel="preconnect" href="https://maps.google.com">
     
     <!-- Preload critical resources -->
-    <link rel="preload" href="assets/images/about-sign.jpeg" as="image" type="image/jpeg">
+    <link rel="preload" href="assets/images/business-card.webp" as="image" type="image/webp">
     
     <!-- Critical CSS inline - Minimal for above-the-fold only -->
     <style>
@@ -159,8 +185,8 @@
     </style>
     
     <!-- Non-critical CSS loaded asynchronously -->
-    <link rel="preload" href="assets/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="assets/css/styles.css"></noscript>
+    <link rel="preload" href="assets/css/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/styles.min.css"></noscript>
     
     <!-- Mobile-specific meta tags for better performance -->
     <meta name="format-detection" content="telephone=no">
@@ -170,7 +196,7 @@
     <meta name="apple-mobile-web-app-title" content="Jamuna Fisheries">
     
     <!-- Additional critical image preload for mobile -->
-    <link rel="preload" href="assets/images/about-banner.jpeg" as="image" type="image/jpeg">
+    <link rel="preload" href="assets/images/owner.webp" as="image" type="image/webp">
     
     <!-- Fonts loaded with display=swap for better performance -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -204,7 +230,7 @@
         },
         "openingHours": "Mo-Sa 08:00-20:00, Su 09:00-18:00",
         "priceRange": "₹₹",
-        "image": "https://jamunafisheries.github.io/assets/images/about-sign.jpeg",
+        "image": "https://jamunafisheries.github.io/assets/images/business-card.webp",
         "founder": {
             "@type": "Person",
             "name": "Mr. Ashis Nandi"
@@ -257,7 +283,7 @@
         "@type": "Organization",
         "name": "Jamuna Fisheries",
         "url": "https://jamunafisheries.github.io",
-        "logo": "https://jamunafisheries.github.io/assets/images/about-sign.jpeg",
+        "logo": "https://jamunafisheries.github.io/assets/images/business-card.webp",
         "sameAs": [
             "https://www.youtube.com/@JamunaFisheries"
         ],
@@ -273,10 +299,10 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-logo">
-                <i class="fas fa-fish"></i>
+                <i class="fas fa-fish" aria-hidden="true"></i>
                 <span>Jamuna Fisheries</span>
             </div>
             <ul class="nav-menu" id="navMenu">
@@ -321,19 +347,19 @@
             <div class="hero-slider-wrapper">
                 <div class="slider" id="hero-slider" role="region" aria-roledescription="carousel" aria-label="Company showcase images">
                     <div class="slide active" role="group" aria-roledescription="slide" aria-label="1 of 5">
-                        <img src="assets/images/slider/slide-1.webp" alt="Jamuna Fisheries - Fish Farm Overview" loading="eager" fetchpriority="high">
+                        <img src="assets/images/slider/slide-1.webp" alt="Jamuna Fisheries - Fish Farm Overview" loading="eager" fetchpriority="high" width="1920" height="1080">
                     </div>
                     <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 5">
-                        <img src="assets/images/slider/slide-2.webp" alt="Jamuna Fisheries - Fish Pond Management" loading="lazy">
+                        <img src="assets/images/slider/slide-2.webp" alt="Jamuna Fisheries - Fish Pond Management" loading="lazy" width="1920" height="1080">
                     </div>
                     <div class="slide" role="group" aria-roledescription="slide" aria-label="3 of 5">
-                        <img src="assets/images/slider/slide-3.webp" alt="Jamuna Fisheries - Fish Breeding Process" loading="lazy">
+                        <img src="assets/images/slider/slide-3.webp" alt="Jamuna Fisheries - Fish Breeding Process" loading="lazy" width="1920" height="1080">
                     </div>
                     <div class="slide" role="group" aria-roledescription="slide" aria-label="4 of 5">
-                        <img src="assets/images/slider/slide-4.webp" alt="Jamuna Fisheries - Spawn Production" loading="lazy">
+                        <img src="assets/images/slider/slide-4.webp" alt="Jamuna Fisheries - Spawn Production" loading="lazy" width="1920" height="1080">
                     </div>
                     <div class="slide" role="group" aria-roledescription="slide" aria-label="5 of 5">
-                        <img src="assets/images/slider/slide-5.webp" alt="Jamuna Fisheries - Quality Fish Fingerlings" loading="lazy">
+                        <img src="assets/images/slider/slide-5.webp" alt="Jamuna Fisheries - Quality Fish Fingerlings" loading="lazy" width="1920" height="1080">
                     </div>
                     <button class="slider-arrow prev" aria-label="Previous slide" type="button">&#10094;</button>
                     <button class="slider-arrow next" aria-label="Next slide" type="button">&#10095;</button>
@@ -458,7 +484,7 @@
                 <div style="display: grid; grid-template-columns: 1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start;">
                     <!-- Leadership -->
                     <div class="about-leadership">
-                        <img src="assets/images/owner.webp" alt="Mr. Ashis Nandi - Owner of Jamuna Fisheries" loading="lazy" class="about-leader-image">
+                        <img src="assets/images/owner.webp" alt="Mr. Ashis Nandi - Owner of Jamuna Fisheries" loading="lazy" class="about-leader-image" width="200" height="200">
                         <div class="about-leader-info">
                             <h3 class="about-leader-name">Mr. Ashis Nandi</h3>
                             <p data-translate="founder_owner" class="about-leader-title">Founder & Owner</p>
@@ -481,7 +507,7 @@
                 <div style="display: grid; grid-template-columns: 1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start;">
                     <!-- Business Card Image -->
                     <div class="about-business-card">
-                        <img src="assets/images/business-card.webp" alt="Jamuna Fisheries Business Card" class="about-business-card-image">
+                        <img src="assets/images/business-card.webp" alt="Jamuna Fisheries Business Card" class="about-business-card-image" loading="lazy" width="750" height="500">
                     </div>
 
                     <!-- Location & Google Business -->
@@ -863,7 +889,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 data-translate="latest_videos">Latest Videos</h2>
-                <p data-translate="latest_videos_subtitle">Watch our latest cooking tutorials, fishing adventures, and product showcases</p>
+                <p data-translate="latest_videos_subtitle">Watch our latest spawn production videos, breeding techniques, and aquaculture practices</p>
             </div>
             
             <!-- COMBINED CARD 1: YouTube Channel Info -->
@@ -1245,8 +1271,32 @@
     </div>
 
     <!-- Optimized JavaScript loading -->
-    <script src="assets/js/translations.js" defer></script>
-    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/translations.min.js" defer></script>
+    <script src="assets/js/script.min.js" defer></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
     
     <!-- Performance monitoring and accessibility improvements -->
     <script>
@@ -1256,6 +1306,13 @@
                 const perfData = performance.getEntriesByType('navigation')[0];
                 console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
                 console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms');
+                
+                // Send performance data to Google Analytics
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'page_load_time', {
+                        'custom_parameter': Math.round(perfData.loadEventEnd - perfData.loadEventStart)
+                    });
+                }
             }
         });
         

@@ -179,6 +179,24 @@ const translations = {
         // Footer Missing
         "owner_footer": "Owner: Mr. Ashis Nandi",
         
+        // Additional Professional Translations
+        "years_experience": "50+ Years Experience",
+        "trusted_nationwide": "Trusted Nationwide",
+        "government_certified": "Government Certified",
+        "quality_guarantee": "Quality Guarantee",
+        "bulk_orders_available": "Bulk Orders Available",
+        "all_india_delivery": "All India Delivery",
+        "technical_support": "Technical Support",
+        "breeding_consultation": "Breeding Consultation",
+        "seasonal_availability": "Seasonal Availability",
+        "custom_orders": "Custom Orders",
+        "laboratory_tested": "Laboratory Tested",
+        "disease_free": "Disease Free",
+        "high_survival_rate": "High Survival Rate",
+        "fast_delivery": "Fast Delivery",
+        "professional_packaging": "Professional Packaging",
+        "expert_guidance": "Expert Guidance",
+        
         // Why Choose Section
         "why_choose_title": "Why Choose Jamuna Fisheries?",
         "reliable_production": "Reliable, Large-Scale Production",
@@ -262,9 +280,9 @@ const translations = {
         "japani_puti_fish": "जपनी पुटी मछली",
         "japani_puti_fish_desc": "तालाबों और टैंकों में स्टॉकिंग के लिए स्वस्थ जपनी पुटी मछली",
         "grass_carp_fish": "ग्रास कार्प मछली",
-        "grass_carp_fish_desc": "विशेष जलीय कृषि के लिए प्रीमियम ग्रास कार्प जलीय कृषि के लिए उच्च मानों के साथ विशेषज्ञता रखती है। हम जलीय कृषि उद्योग का समर्थन करने के लिए प्रतिबद्ध हैं और श्रेष्ठ मछली बीज प्रदान करते हैं जो पूरे भारत में सफल मछली पालन संचालन सुनिश्चित करता है।",
+        "grass_carp_fish_desc": "खरपतवार नियंत्रण के लिए प्रीमियम ग्रास कार्प (स्टेनोफैरिंगोडन इडेला) मछली",
         "silver_carp_fish": "सिल्वर कार्प मछली",
-        "silver_carp_fish_desc": "सतही भोजन मछली उत्पादन के लिए गुणवत्तापूर्ण सिल्वर कार्प जलीय कृषि के लिए उच्च मानों के साथ विशेषज्ञता रखती है। हम जलीय कृषि उद्योग का समर्थन करने के लिए प्रतिबद्ध हैं और श्रेष्ठ मछली बीज प्रदान करते हैं जो पूरे भारत में सफल मछली पालन संचालन सुनिश्चित करता है।",
+        "silver_carp_fish_desc": "सतही भोजन के लिए प्रीमियम सिल्वर कार्प (हाइपोफ्थैलमिकथिस मोलिट्रिक्स) मछली",
         
         // Egg Products
         "rohu_eggs": "रोहू मछली के अंडे",
@@ -382,6 +400,24 @@ const translations = {
         // Footer Missing
         "owner_footer": "मालिक: श्री आशीष नंदी",
         
+        // Additional Professional Translations
+        "years_experience": "50+ वर्षों का अनुभव",
+        "trusted_nationwide": "राष्ट्रव्यापी विश्वसनीय",
+        "government_certified": "सरकारी प्रमाणित",
+        "quality_guarantee": "गुणवत्ता की गारंटी",
+        "bulk_orders_available": "बल्क ऑर्डर उपलब्ध",
+        "all_india_delivery": "पूरे भारत में डिलीवरी",
+        "technical_support": "तकनीकी सहायता",
+        "breeding_consultation": "प्रजनन परामर्श",
+        "seasonal_availability": "मौसमी उपलब्धता",
+        "custom_orders": "कस्टम ऑर्डर",
+        "laboratory_tested": "प्रयोगशाला परीक्षित",
+        "disease_free": "रोग मुक्त",
+        "high_survival_rate": "उच्च जीवित रहने की दर",
+        "fast_delivery": "तेज़ डिलीवरी",
+        "professional_packaging": "पेशेवर पैकेजिंग",
+        "expert_guidance": "विशेषज्ञ मार्गदर्शन",
+        
         // Why Choose Section
         "why_choose_title": "जमुना फिशरीज को क्यों चुनें?",
         "reliable_production": "विश्वसनीय, बड़े पैमाने पर उत्पादन",
@@ -447,9 +483,9 @@ const translations = {
         "view_google_maps": "Google Maps-এ দেখুন",
         
         // Products Section
-        "our_products": "হমাদের পণ্য",
+        "our_products": "আমাদের পণ্য",
         "products_subtitle": "আমরা সব ধরনের স্পন উৎপাদন করি: সিলভার কার্প, বটা, গ্রাস কার্প, ইত্যাদি",
-        "products_title": "হমাদের পণ্য",
+        "products_title": "আমাদের পণ্য",
         // Product Categories
         "category_fish": "মাছ",
         "category_eggs": "ডিম",
@@ -584,6 +620,16 @@ const translations = {
         
         // Footer Missing
         "owner_footer": "মালিক: শ্রী আশীষ নন্দী",
+        
+        // Additional Professional Translations
+        "years_experience": "৫০+ বছরের অভিজ্ঞতা",
+        "trusted_nationwide": "দেশব্যাপী বিশ্বস্ত",
+        "government_certified": "সরকারি প্রত্যয়িত",
+        "quality_guarantee": "মানের গ্যারান্টি",
+        "bulk_orders_available": "বাল্ক অর্ডার উপলব্ধ",
+        "all_india_delivery": "সমগ্র ভারতে ডেলিভারি",
+        "technical_support": "প্রযুক্তিগত সহায়তা",
+        "breeding_consultation": "প্রজনন পরামর্শ",
         
         // Why Choose Section
         "why_choose_title": "কেন যমুনা ফিশারিজ বেছে নেবেন?",

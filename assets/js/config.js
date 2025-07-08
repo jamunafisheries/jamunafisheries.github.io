@@ -101,7 +101,7 @@ const CONFIG = {
         description: "Jamuna Fisheries - Leading fish spawn and fingerlings supplier in Bankura, West Bengal. Premium Rohu, Catla, Mrigal, Silver Carp spawn. Contact Mr. Ashis Nandi at 9609673056. All India delivery available.",
         keywords: "Jamuna Fisheries, fish spawn supplier, fingerlings supplier, Bankura, West Bengal, Rohu spawn, Catla spawn, Mrigal spawn, Silver Carp spawn, fish farming, aquaculture, Mr. Ashis Nandi, fish seed production",
         author: "Mr. Ashis Nandi - Jamuna Fisheries",
-        ogImage: "https://jamunafisheries.github.io/assets/images/about-sign.jpeg"
+        ogImage: "https://jamunafisheries.github.io/assets/images/business-card.webp"
     }
 };
 
