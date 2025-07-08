@@ -35,38 +35,38 @@ const CONFIG = {
         {
             name: "Rohu Spawn",
             description: "High-quality Rohu (Labeo rohita) spawn for commercial fish farming",
-            price: "Contact for Pricing",
-            image: "assets/images/rohu-fish.jpg"
+            price: "📞 9609673056",
+            image: "assets/images/fish/rohu-carp.webp"
         },
         {
-            name: "Catla Spawn",
-            description: "Premium Catla (Catla catla) spawn for polyculture systems",
-            price: "Contact for Pricing",
-            image: "assets/images/catla-fish.jpg"
+            name: "Katla Spawn",
+            description: "Premium Katla (Katla katla) spawn for polyculture systems",
+            price: "📞 9609673056",
+            image: "assets/images/fish/katla-carp.webp"
         },
         {
-            name: "Mrigal Spawn",
-            description: "Quality Mrigal (Cirrhinus mrigala) spawn for traditional farming",
-            price: "Contact for Pricing",
-            image: "assets/images/mrigal-fish.jpg"
+            name: "Common Carp Spawn",
+            description: "Quality Common Carp (Cyprinus carpio) spawn for traditional farming",
+            price: "📞 9609673056",
+            image: "assets/images/fish/common-carp.webp"
         },
         {
             name: "Silver Carp Spawn",
             description: "Premium Silver Carp (Hypophthalmichthys molitrix) spawn for surface feeding",
-            price: "Contact for Pricing",
-            image: "assets/images/silver-carp.jpg"
+            price: "📞 9609673056",
+            image: "assets/images/fish/silver-carp.webp"
         },
         {
             name: "Grass Carp Spawn",
             description: "Quality Grass Carp (Ctenopharyngodon idella) spawn for weed control",
-            price: "Contact for Pricing",
-            image: "assets/images/grass-carp.jpg"
+            price: "📞 9609673056",
+            image: "assets/images/fish/grass-carp.webp"
         },
         {
             name: "Fingerlings",
             description: "Healthy fingerlings ready for stocking in ponds and tanks",
-            price: "Contact for Pricing",
-            image: "assets/images/fingerlings.jpg"
+            price: "📞 9609673056",
+            image: "assets/images/fish/rohu-carp.webp"
         }
     ],
     

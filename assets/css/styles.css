@@ -1012,6 +1012,8 @@ button, a, .clickable {
   height: 0;
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
   overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .video-embed iframe {
@@ -1021,6 +1023,7 @@ button, a, .clickable {
   width: 100%;
   height: 100%;
   border: none;
+  border-radius: 12px;
 }
 
 /* Contact Section */
@@ -1933,6 +1936,9 @@ button, a, .clickable {
   width: 100%;
   height: 0;
   padding-bottom: 56.25%;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .video-container iframe {
@@ -1941,6 +1947,8 @@ button, a, .clickable {
   left: 0;
   width: 100%;
   height: 100%;
+  border: none;
+  border-radius: 12px;
 }
 
 /* Zoom Overlay */
@@ -2421,7 +2429,7 @@ button, a, .clickable {
   }
   
   .video-embed iframe {
-    height: clamp(180px, 35vh, 200px) !important;
+    /* Responsive aspect ratio maintained */
   }
   
   .youtube-info h3 {
@@ -3150,7 +3158,7 @@ button, a, .clickable {
 .about-video-iframe {
   width: 100%;
   max-width: 500px;
-  height: clamp(200px, 50vw, 280px);
+  aspect-ratio: 16/9;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
@@ -3695,10 +3703,7 @@ button, a, .clickable {
 }
 
 .video-embed iframe {
-  width: 100%;
-  height: clamp(200px, 25vw, 280px);
-  border: none;
-  display: block;
+  /* Responsive aspect ratio maintained - no fixed height needed */
 }
 
 .video-info {
@@ -3800,7 +3805,7 @@ button, a, .clickable {
   }
 
   .video-embed iframe {
-    height: clamp(180px, 25vw, 220px);
+    /* Responsive aspect ratio maintained */
   }
 
   .youtube-cta-actions {
@@ -3822,7 +3827,7 @@ button, a, .clickable {
   }
 
   .video-embed iframe {
-    height: clamp(160px, 25vw, 200px);
+    /* Responsive aspect ratio maintained */
   }
 
   .youtube-benefits-list li {

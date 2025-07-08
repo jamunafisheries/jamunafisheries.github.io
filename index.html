@@ -320,17 +320,29 @@
         <section id="home" class="hero" aria-label="Welcome to Jamuna Fisheries">
             <div class="hero-slider-wrapper">
                 <div class="slider" id="hero-slider" role="region" aria-roledescription="carousel" aria-label="Company showcase images">
-                    <div class="slide active" role="group" aria-roledescription="slide" aria-label="1 of 2">
-                        <img src="assets/images/about-sign.jpeg" alt="Jamuna Fisheries Signboard" loading="eager" fetchpriority="high">
+                    <div class="slide active" role="group" aria-roledescription="slide" aria-label="1 of 5">
+                        <img src="assets/images/slider/slide-1.webp" alt="Jamuna Fisheries - Fish Farm Overview" loading="eager" fetchpriority="high">
                     </div>
-                    <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 2">
-                        <img src="assets/images/about-banner.jpeg" alt="Jamuna Fisheries Business Card" loading="lazy">
+                    <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 5">
+                        <img src="assets/images/slider/slide-2.webp" alt="Jamuna Fisheries - Fish Pond Management" loading="lazy">
+                    </div>
+                    <div class="slide" role="group" aria-roledescription="slide" aria-label="3 of 5">
+                        <img src="assets/images/slider/slide-3.webp" alt="Jamuna Fisheries - Fish Breeding Process" loading="lazy">
+                    </div>
+                    <div class="slide" role="group" aria-roledescription="slide" aria-label="4 of 5">
+                        <img src="assets/images/slider/slide-4.webp" alt="Jamuna Fisheries - Spawn Production" loading="lazy">
+                    </div>
+                    <div class="slide" role="group" aria-roledescription="slide" aria-label="5 of 5">
+                        <img src="assets/images/slider/slide-5.webp" alt="Jamuna Fisheries - Quality Fish Fingerlings" loading="lazy">
                     </div>
                     <button class="slider-arrow prev" aria-label="Previous slide" type="button">&#10094;</button>
                     <button class="slider-arrow next" aria-label="Next slide" type="button">&#10095;</button>
                     <div class="slider-dots" role="tablist" aria-label="Slide navigation">
                         <button class="dot active" role="tab" aria-selected="true" aria-label="Go to slide 1" type="button"></button>
                         <button class="dot" role="tab" aria-selected="false" aria-label="Go to slide 2" type="button"></button>
+                        <button class="dot" role="tab" aria-selected="false" aria-label="Go to slide 3" type="button"></button>
+                        <button class="dot" role="tab" aria-selected="false" aria-label="Go to slide 4" type="button"></button>
+                        <button class="dot" role="tab" aria-selected="false" aria-label="Go to slide 5" type="button"></button>
                     </div>
                 </div>
             </div>
@@ -343,7 +355,7 @@
                     <h1 data-translate="welcome_title" class="welcome-title">
                         Welcome to Jamuna Fisheries 🏞️
                     </h1>
-                    <h2 class="welcome-subtitle">
+                    <h2 class="welcome-subtitle" data-translate="welcome_subtitle_2">
                         A trusted name in scientific and sustainable fish breeding
                     </h2>
                 </div>
@@ -351,8 +363,8 @@
                 <!-- COMBINED CARD 1: Main Introduction & Credibility -->
                 <div class="welcome-combined-main">
                     <div class="welcome-intro">
-                        <h3 class="welcome-intro-title">🐟 Premium Fish Spawn Production</h3>
-                        <p class="welcome-intro-text" data-translate="welcome_subtitle">
+                        <h3 class="welcome-intro-title" data-translate="premium_spawn_production">🐟 Premium Fish Spawn Production</h3>
+                        <p class="welcome-intro-text" data-translate="hormone_induced_techniques">
                             We specialize in hormone-induced spawning techniques 💉🐠 to deliver high-quality, healthy fish spawn at scale 🐟🧬.
                         </p>
                         <div class="welcome-credibility">
@@ -406,12 +418,12 @@
                 <div class="welcome-combined-location">
                     <h4 class="welcome-card-header">
                         <i class="fas fa-map-marker-alt"></i>
-                        Our Location & Recognition
+                        <span data-translate="location_recognition">Our Location & Recognition</span>
                     </h4>
                     <div class="welcome-location-content">
                         <div class="welcome-location-info">
-                            <h5 class="welcome-location-title">📍 Located in Ramsagar, Bankura, West Bengal</h5>
-                            <p class="welcome-location-text">
+                            <h5 class="welcome-location-title" data-translate="location_bankura">📍 Located in Ramsagar, Bankura, West Bengal</h5>
+                            <p class="welcome-location-text" data-translate="leading_hatchery">
                                 Recognized as one of India's leading fish hatcheries with over 50 years of expertise in sustainable aquaculture.
                             </p>
                         </div>
@@ -446,30 +458,30 @@
                 <div style="display: grid; grid-template-columns: 1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start;">
                     <!-- Leadership -->
                     <div class="about-leadership">
-                        <img src="assets/images/owner-image.jpg" alt="Mr. Ashis Nandi - Owner of Jamuna Fisheries" loading="lazy" class="about-leader-image">
+                        <img src="assets/images/owner.webp" alt="Mr. Ashis Nandi - Owner of Jamuna Fisheries" loading="lazy" class="about-leader-image">
                         <div class="about-leader-info">
                             <h3 class="about-leader-name">Mr. Ashis Nandi</h3>
                             <p data-translate="founder_owner" class="about-leader-title">Founder & Owner</p>
-                            <blockquote class="about-leader-quote">"With over <span class='about-leader-highlight'>50 years</span> of expertise, we blend tradition and science to empower aquaculture success."</blockquote>
+                            <blockquote class="about-leader-quote" data-translate="owner_quote">"With over <span class='about-leader-highlight'>50 years</span> of expertise, we blend tradition and science to empower aquaculture success."</blockquote>
                         </div>
                     </div>
 
                     <!-- Company Overview -->
                     <div class="about-company-overview">
-                        <h4 class="about-company-title">🌊 Empowering Indian Aquaculture</h4>
-                        <p class="about-company-text">Jamuna Fisheries specializes in premium-quality spawn and fingerlings, trusted by thousands of fish farmers across India. Our Ramsagar, Bankura-based hatchery delivers outstanding results with hormone-induced breeding and modern science.</p>
-                        <p class="about-company-text tagline">We don't just supply fish seed — we empower successful aquaculture.</p>
+                        <h4 class="about-company-title" data-translate="empowering_aquaculture">🌊 Empowering Indian Aquaculture</h4>
+                        <p class="about-company-text" data-translate="company_overview">Jamuna Fisheries specializes in premium-quality spawn and fingerlings, trusted by thousands of fish farmers across India. Our Ramsagar, Bankura-based hatchery delivers outstanding results with hormone-induced breeding and modern science.</p>
+                        <p class="about-company-text tagline" data-translate="company_tagline">We don't just supply fish seed — we empower successful aquaculture.</p>
                     </div>
                 </div>
             </div>
 
             <!-- COMBINED CARD 2: Business Info & Location -->
             <div class="about-combined-info">
-                <h4 class="about-card-header">📋 Company Information & Location</h4>
+                <h4 class="about-card-header" data-translate="company_info_location">📋 Company Information & Location</h4>
                 <div style="display: grid; grid-template-columns: 1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start;">
                     <!-- Business Card Image -->
                     <div class="about-business-card">
-                        <img src="assets/images/about-banner.jpeg" alt="Jamuna Fisheries Business Card" class="about-business-card-image">
+                        <img src="assets/images/business-card.webp" alt="Jamuna Fisheries Business Card" class="about-business-card-image">
                     </div>
 
                     <!-- Location & Google Business -->
@@ -492,11 +504,11 @@
 
             <!-- COMBINED CARD 3: Video, Strengths & Quality -->
             <div class="about-combined-features">
-                <h4 class="about-card-header">🎯 Our Story, Excellence & Quality</h4>
+                <h4 class="about-card-header" data-translate="story_excellence_quality">🎯 Our Story, Excellence & Quality</h4>
                 <div style="display: grid; grid-template-columns: 1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start;">
                     <!-- Video Story -->
                     <div class="about-video-section">
-                        <h5 class="about-video-title">📹 Watch Our Story</h5>
+                        <h5 class="about-video-title" data-translate="watch_story">📹 Watch Our Story</h5>
                         <div style="text-align: center;">
                             <iframe src="https://www.youtube.com/embed/m6ldeDh5-JI?si=x1XXIaTbEjyHdf4g&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="about-video-iframe"></iframe>
                         </div>
@@ -506,30 +518,30 @@
                     <div style="display: flex; flex-direction: column; gap: clamp(1.5rem, 4vw, 2rem);">
                         <!-- Strengths -->
                         <div class="about-excellence">
-                            <h5 class="about-excellence-title">🏆 Our Excellence</h5>
+                            <h5 class="about-excellence-title" data-translate="our_excellence">🏆 Our Excellence</h5>
                             <div class="about-excellence-grid">
                                 <div class="about-excellence-item">
                                     <span class="about-excellence-icon">🎯</span>
-                                    <div class="about-excellence-text"><strong>Precision Breeding</strong><br><span>Expert care with scientific methodology</span></div>
+                                    <div class="about-excellence-text"><strong data-translate="precision_breeding">Precision Breeding</strong><br><span data-translate="precision_breeding_desc">Expert care with scientific methodology</span></div>
                                 </div>
                                 <div class="about-excellence-item">
                                     <span class="about-excellence-icon">🧬</span>
-                                    <div class="about-excellence-text"><strong>Science-Backed Techniques</strong><br><span>Proven methods with modern innovation</span></div>
+                                    <div class="about-excellence-text"><strong data-translate="science_backed">Science-Backed Techniques</strong><br><span data-translate="science_backed_desc">Proven methods with modern innovation</span></div>
                                 </div>
                                 <div class="about-excellence-item">
                                     <span class="about-excellence-icon">🌱</span>
-                                    <div class="about-excellence-text"><strong>Sustainable Approach</strong><br><span>Quality-first with environmental care</span></div>
+                                    <div class="about-excellence-text"><strong data-translate="sustainable_approach">Sustainable Approach</strong><br><span data-translate="sustainable_approach_desc">Quality-first with environmental care</span></div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Quality Assurance -->
                         <div class="about-quality">
-                            <h5 class="about-quality-title">🔍 Quality Assurance Process</h5>
+                            <h5 class="about-quality-title" data-translate="quality_assurance">🔍 Quality Assurance Process</h5>
                             <ol class="about-quality-list">
-                                <li>Premium Broodstock Selection</li>
-                                <li>Rigorous Testing & Certification</li>
-                                <li>Meticulous Batch Quality Checks</li>
+                                <li data-translate="broodstock_selection">Premium Broodstock Selection</li>
+                                <li data-translate="testing_certification">Rigorous Testing & Certification</li>
+                                <li data-translate="batch_quality_checks">Meticulous Batch Quality Checks</li>
                             </ol>
                         </div>
                     </div>
@@ -596,7 +608,7 @@
                     <div class="products-grid">
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/rohu-fish.jpg" alt="Rohu Fish" class="zoom-image" loading="lazy">
+                                <img src="assets/images/fish/rohu-carp.webp" alt="Rohu Fish" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
@@ -604,46 +616,72 @@
                             <div class="product-info">
                                 <h3 data-translate="rohu_fish">Rohu Fish</h3>
                                 <p data-translate="rohu_fish_desc">High-quality Rohu (Labeo rohita) fish for commercial fish farming</p>
-                                <span class="price clickable-price" data-translate="contact_pricing" onclick="showContactInfo()">Contact for Pricing</span>
+                                <a href="tel:9609673056" class="price clickable-price">📞 9609673056</a>
                             </div>
                         </div>
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/catla-fish.jpg" alt="Catla Fish" class="zoom-image" loading="lazy">
+                                <img src="assets/images/fish/katla-carp.webp" alt="Katla Fish" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
                             </div>
                             <div class="product-info">
-                                <h3 data-translate="catla_fish">Catla Fish</h3>
-                                <p data-translate="catla_fish_desc">Premium Catla (Catla catla) fish for polyculture systems</p>
-                                <span class="price clickable-price" data-translate="contact_pricing" onclick="showContactInfo()">Contact for Pricing</span>
+                                <h3 data-translate="katla_fish">Katla Fish</h3>
+                                <p data-translate="katla_fish_desc">Premium Katla (Katla katla) fish for polyculture systems</p>
+                                <a href="tel:9609673056" class="price clickable-price">📞 9609673056</a>
                             </div>
                         </div>
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/mrigal-fish.jpg" alt="Mrigal Fish" class="zoom-image" loading="lazy">
+                                <img src="assets/images/fish/common-carp.webp" alt="Common Carp Fish" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
                             </div>
                             <div class="product-info">
-                                <h3 data-translate="mrigal_fish">Mrigal Fish</h3>
-                                <p data-translate="mrigal_fish_desc">Quality Mrigal (Cirrhinus mrigala) fish for traditional farming</p>
-                                <span class="price clickable-price" data-translate="contact_pricing" onclick="showContactInfo()">Contact for Pricing</span>
+                                <h3 data-translate="common_carp_fish">Common Carp Fish</h3>
+                                <p data-translate="common_carp_fish_desc">Quality Common Carp (Cyprinus carpio) fish for traditional farming</p>
+                                <a href="tel:9609673056" class="price clickable-price">📞 9609673056</a>
                             </div>
                         </div>
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/puti-fish.jpg" alt="Puti Fish" class="zoom-image" loading="lazy">
+                                <img src="assets/images/fish/japani-puti.webp" alt="Japani Puti Fish" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
                             </div>
                             <div class="product-info">
-                                <h3 data-translate="puti_fish">Puti Fish</h3>
-                                <p data-translate="puti_fish_desc">Healthy puti fish ready for stocking in ponds and tanks</p>
-                                <span class="price clickable-price" data-translate="contact_pricing" onclick="showContactInfo()">Contact for Pricing</span>
+                                <h3 data-translate="japani_puti_fish">Japani Puti Fish</h3>
+                                <p data-translate="japani_puti_fish_desc">Healthy Japani Puti fish ready for stocking in ponds and tanks</p>
+                                <a href="tel:9609673056" class="price clickable-price">📞 9609673056</a>
+                            </div>
+                        </div>
+                        <div class="product-card zoomable">
+                            <div class="product-image">
+                                <img src="assets/images/fish/grass-carp.webp" alt="Grass Carp Fish" class="zoom-image" loading="lazy">
+                                <div class="zoom-overlay">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 data-translate="grass_carp_fish">Grass Carp Fish</h3>
+                                <p data-translate="grass_carp_fish_desc">Premium Grass Carp (Ctenopharyngodon idella) fish for weed control</p>
+                                <a href="tel:9609673056" class="price clickable-price">📞 9609673056</a>
+                            </div>
+                        </div>
+                        <div class="product-card zoomable">
+                            <div class="product-image">
+                                <img src="assets/images/fish/silver-carp.webp" alt="Silver Carp Fish" class="zoom-image" loading="lazy">
+                                <div class="zoom-overlay">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 data-translate="silver_carp_fish">Silver Carp Fish</h3>
+                                <p data-translate="silver_carp_fish_desc">Premium Silver Carp (Hypophthalmichthys molitrix) fish for surface feeding</p>
+                                <a href="tel:9609673056" class="price clickable-price">📞 9609673056</a>
                             </div>
                         </div>
                     </div>
@@ -654,28 +692,67 @@
                     <div class="products-grid">
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/rohu-fish.jpg" alt="Fish Eggs" class="zoom-image" loading="lazy">
+                                <img src="assets/images/egg/rohu-egg.webp" alt="Rohu Fish Eggs" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
                             </div>
                             <div class="product-info">
-                                <h3 data-translate="fish_eggs">Fish Eggs</h3>
-                                <p data-translate="fish_eggs_desc">Fresh fish eggs for breeding and aquaculture purposes</p>
-                                <span class="price clickable-price" data-translate="contact_pricing" onclick="showContactInfo()">Contact for Pricing</span>
+                                <h3 data-translate="rohu_eggs">Rohu Fish Eggs</h3>
+                                <p data-translate="rohu_eggs_desc">Fresh Rohu fish eggs for breeding and aquaculture purposes</p>
+                                <a href="tel:9609673056" class="price clickable-price">📞 9609673056</a>
                             </div>
                         </div>
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/catla-fish.jpg" alt="Fertilized Eggs" class="zoom-image" loading="lazy">
+                                <img src="assets/images/egg/katla-egg.webp" alt="Katla Fish Eggs" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
                             </div>
                             <div class="product-info">
-                                <h3 data-translate="fertilized_eggs">Fertilized Eggs</h3>
-                                <p data-translate="fertilized_eggs_desc">High-quality fertilized fish eggs for hatchery operations</p>
-                                <span class="price clickable-price" data-translate="contact_pricing" onclick="showContactInfo()">Contact for Pricing</span>
+                                <h3 data-translate="katla_eggs">Katla Fish Eggs</h3>
+                                <p data-translate="katla_eggs_desc">High-quality Katla fish eggs for hatchery operations</p>
+                                <a href="tel:9609673056" class="price clickable-price">📞 9609673056</a>
+                            </div>
+                        </div>
+                        <div class="product-card zoomable">
+                            <div class="product-image">
+                                <img src="assets/images/egg/grass-carp-egg.webp" alt="Grass Carp Eggs" class="zoom-image" loading="lazy">
+                                <div class="zoom-overlay">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 data-translate="grass_carp_eggs">Grass Carp Eggs</h3>
+                                <p data-translate="grass_carp_eggs_desc">Premium Grass Carp eggs for specialized aquaculture</p>
+                                <a href="tel:9609673056" class="price clickable-price">📞 9609673056</a>
+                            </div>
+                        </div>
+                        <div class="product-card zoomable">
+                            <div class="product-image">
+                                <img src="assets/images/egg/silver-carp-egg.webp" alt="Silver Carp Eggs" class="zoom-image" loading="lazy">
+                                <div class="zoom-overlay">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 data-translate="silver_carp_eggs">Silver Carp Eggs</h3>
+                                <p data-translate="silver_carp_eggs_desc">Quality Silver Carp eggs for surface feeding fish production</p>
+                                <a href="tel:9609673056" class="price clickable-price">📞 9609673056</a>
+                            </div>
+                        </div>
+                        <div class="product-card zoomable">
+                            <div class="product-image">
+                                <img src="assets/images/egg/common-carp-egg.webp" alt="Common Carp Eggs" class="zoom-image" loading="lazy">
+                                <div class="zoom-overlay">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 data-translate="common_carp_eggs">Common Carp Eggs</h3>
+                                <p data-translate="common_carp_eggs_desc">Fresh Common Carp eggs for commercial fish breeding</p>
+                                <a href="tel:9609673056" class="price clickable-price">📞 9609673056</a>
                             </div>
                         </div>
                     </div>
@@ -686,7 +763,7 @@
                     <div class="products-grid">
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/rohu-fish.jpg" alt="Rohu Spawn" class="zoom-image" loading="lazy">
+                                <img src="assets/images/fish/rohu-carp.webp" alt="Rohu Spawn" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
@@ -694,38 +771,38 @@
                             <div class="product-info">
                                 <h3 data-translate="rohu_spawn">Rohu Spawn</h3>
                                 <p data-translate="rohu_spawn_desc">High-quality Rohu (Labeo rohita) spawn for commercial fish farming</p>
-                                <span class="price clickable-price" data-translate="contact_pricing" onclick="showContactInfo()">Contact for Pricing</span>
+                                <a href="tel:9609673056" class="price clickable-price">📞 9609673056</a>
                             </div>
                         </div>
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/catla-fish.jpg" alt="Catla Spawn" class="zoom-image" loading="lazy">
+                                <img src="assets/images/fish/katla-carp.webp" alt="Katla Spawn" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
                             </div>
                             <div class="product-info">
-                                <h3 data-translate="catla_spawn">Catla Spawn</h3>
-                                <p data-translate="catla_spawn_desc">Premium Catla (Catla catla) spawn for polyculture systems</p>
-                                <span class="price clickable-price" data-translate="contact_pricing" onclick="showContactInfo()">Contact for Pricing</span>
+                                <h3 data-translate="katla_spawn">Katla Spawn</h3>
+                                <p data-translate="katla_spawn_desc">Premium Katla (Katla katla) spawn for polyculture systems</p>
+                                <a href="tel:9609673056" class="price clickable-price">📞 9609673056</a>
                             </div>
                         </div>
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/mrigal-fish.jpg" alt="Mrigal Spawn" class="zoom-image" loading="lazy">
+                                <img src="assets/images/fish/common-carp.webp" alt="Common Carp Spawn" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
                             </div>
                             <div class="product-info">
-                                <h3 data-translate="mrigal_spawn">Mrigal Spawn</h3>
-                                <p data-translate="mrigal_spawn_desc">Quality Mrigal (Cirrhinus mrigala) spawn for traditional farming</p>
-                                <span class="price clickable-price" data-translate="contact_pricing" onclick="showContactInfo()">Contact for Pricing</span>
+                                <h3 data-translate="common_carp_spawn">Common Carp Spawn</h3>
+                                <p data-translate="common_carp_spawn_desc">Quality Common Carp (Cyprinus carpio) spawn for traditional farming</p>
+                                <a href="tel:9609673056" class="price clickable-price">📞 9609673056</a>
                             </div>
                         </div>
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/silver-carp.jpg" alt="Silver Carp Spawn" class="zoom-image" loading="lazy">
+                                <img src="assets/images/fish/silver-carp.webp" alt="Silver Carp Spawn" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
@@ -733,25 +810,25 @@
                             <div class="product-info">
                                 <h3 data-translate="silver_carp_spawn">Silver Carp Spawn</h3>
                                 <p data-translate="silver_carp_spawn_desc">Premium Silver Carp (Hypophthalmichthys molitrix) spawn for surface feeding</p>
-                                <span class="price clickable-price" data-translate="contact_pricing" onclick="showContactInfo()">Contact for Pricing</span>
+                                <a href="tel:9609673056" class="price clickable-price">📞 9609673056</a>
                             </div>
                         </div>
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/bata-fish.jpg" alt="Bata Spawn" class="zoom-image" loading="lazy">
+                                <img src="assets/images/fish/japani-puti.webp" alt="Japani Puti Spawn" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
                             </div>
                             <div class="product-info">
-                                <h3 data-translate="bata_spawn">Bata Spawn</h3>
-                                <p data-translate="bata_spawn_desc">Quality Bata (Labeo bata) spawn for traditional aquaculture systems</p>
-                                <span class="price clickable-price" data-translate="contact_pricing" onclick="showContactInfo()">Contact for Pricing</span>
+                                <h3 data-translate="japani_puti_spawn">Japani Puti Spawn</h3>
+                                <p data-translate="japani_puti_spawn_desc">Quality Japani Puti spawn for traditional aquaculture systems</p>
+                                <a href="tel:9609673056" class="price clickable-price">📞 9609673056</a>
                             </div>
                         </div>
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/grass-carp.jpg" alt="Grass Carp Spawn" class="zoom-image" loading="lazy">
+                                <img src="assets/images/fish/grass-carp.webp" alt="Grass Carp Spawn" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
@@ -759,12 +836,12 @@
                             <div class="product-info">
                                 <h3 data-translate="grass_carp_spawn">Grass Carp Spawn</h3>
                                 <p data-translate="grass_carp_spawn_desc">Premium Grass Carp (Ctenopharyngodon idella) spawn for weed control</p>
-                                <span class="price clickable-price" data-translate="contact_pricing" onclick="showContactInfo()">Contact for Pricing</span>
+                                <a href="tel:9609673056" class="price clickable-price">📞 9609673056</a>
                             </div>
                         </div>
                         <div class="product-card zoomable">
                             <div class="product-image">
-                                <img src="assets/images/fingerlings.jpg" alt="Fingerlings" class="zoom-image" loading="lazy">
+                                <img src="assets/images/fish/rohu-carp.webp" alt="Fingerlings" class="zoom-image" loading="lazy">
                                 <div class="zoom-overlay">
                                     <i class="fas fa-search-plus"></i>
                                 </div>
@@ -772,7 +849,7 @@
                             <div class="product-info">
                                 <h3 data-translate="fingerlings">Fingerlings</h3>
                                 <p data-translate="fingerlings_desc">Healthy fingerlings ready for stocking in ponds and tanks</p>
-                                <span class="price clickable-price" data-translate="contact_pricing" onclick="showContactInfo()">Contact for Pricing</span>
+                                <a href="tel:9609673056" class="price clickable-price">📞 9609673056</a>
                             </div>
                         </div>
                     </div>
@@ -797,12 +874,12 @@
                 </h4>
                 <div class="youtube-channel-content">
                     <div class="youtube-channel-description">
-                        <p data-translate="youtube_info_text">Subscribe to our channel for:</p>
+                        <p data-translate="youtube_benefits">Subscribe to our channel for:</p>
                         <ul class="youtube-benefits-list">
-                            <li><i class="fas fa-check-circle"></i> <span>Fish spawn production tutorials</span></li>
-                            <li><i class="fas fa-check-circle"></i> <span>Aquaculture best practices</span></li>
-                            <li><i class="fas fa-check-circle"></i> <span>Behind-the-scenes content</span></li>
-                            <li><i class="fas fa-check-circle"></i> <span>Expert tips and techniques</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-translate="spawn_production_tutorials">Fish spawn production tutorials</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-translate="best_practices">Aquaculture best practices</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-translate="behind_scenes">Behind-the-scenes content</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-translate="expert_tips">Expert tips and techniques</span></li>
                         </ul>
                     </div>
                     <div class="youtube-channel-action">
@@ -825,8 +902,6 @@
                     <div class="video-item">
                         <div class="video-embed">
                             <iframe 
-                                width="100%" 
-                                height="315" 
                                 src="https://www.youtube.com/embed/wXcZjGIhBYE?si=_Y9DGJSct_kbQfrJ" 
                                 title="Grass Carp Spawn Production - Jamuna Fisheries" 
                                 frameborder="0" 
@@ -844,8 +919,6 @@
                     <div class="video-item">
                         <div class="video-embed">
                             <iframe 
-                                width="100%" 
-                                height="315" 
                                 src="https://www.youtube.com/embed/V6tqphlgA6Y?si=fBHeoealyGExchDR" 
                                 title="Japanese Punti Spawn Production - Jamuna Fisheries" 
                                 frameborder="0" 
@@ -863,8 +936,6 @@
                     <div class="video-item">
                         <div class="video-embed">
                             <iframe 
-                                width="100%" 
-                                height="315" 
                                 src="https://www.youtube.com/embed/G40J5WKKQVs?si=t3QWxhT2v9eXjEzJ" 
                                 title="Bata Fish Spawn Production - Jamuna Fisheries" 
                                 frameborder="0" 
@@ -882,8 +953,6 @@
                     <div class="video-item">
                         <div class="video-embed">
                             <iframe 
-                                width="100%" 
-                                height="315" 
                                 src="https://www.youtube.com/embed/PdfFJ6kG600?si=OzW1bsAgXgtCCwuM" 
                                 title="Indian Major Carp Spawn Production - Jamuna Fisheries" 
                                 frameborder="0" 
@@ -901,8 +970,6 @@
                     <div class="video-item">
                         <div class="video-embed">
                             <iframe 
-                                width="100%" 
-                                height="315" 
                                 src="https://www.youtube.com/embed/Ohogbs4qDVA?si=BvO2FbB6_a8z522p" 
                                 title="Rohu Spawn Production - Jamuna Fisheries" 
                                 frameborder="0" 
@@ -920,8 +987,6 @@
                     <div class="video-item">
                         <div class="video-embed">
                             <iframe 
-                                width="100%" 
-                                height="315" 
                                 src="https://www.youtube.com/embed/3A-7WprQDyM?si=l1-tcnkVwtYMqAZt" 
                                 title="Catla Fish Spawn Production - Jamuna Fisheries" 
                                 frameborder="0" 
@@ -939,8 +1004,6 @@
                     <div class="video-item">
                         <div class="video-embed">
                             <iframe 
-                                width="100%" 
-                                height="315" 
                                 src="https://www.youtube.com/embed/JCiboGAqn_0?si=jpPLMfpxIOj26ZMB" 
                                 title="Pangas Fish Spawn Production - Jamuna Fisheries" 
                                 frameborder="0" 
@@ -1028,9 +1091,7 @@
                 <div class="contact-map">
                     <iframe 
                         src="https://www.google.com/maps?q=Jamuna+Fisheries,+Vill+Mouchura,+Post+Teliberia,+Onda,+Bankura,+West+Bengal+722144&output=embed" 
-                        width="100%" 
-                        height="400" 
-                        style="border:0; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);" 
+                        style="border:0; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); width: 100%; height: 300px;" 
                         allowfullscreen="" 
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade">
@@ -1055,7 +1116,8 @@
                         <i class="fas fa-fish"></i>
                         <span>Jamuna Fisheries</span>
                     </div>
-                    <p>Best quality fish breeder & spawn supplier (All India).<br>Owner: Mr. Ashis Nandi</p>
+                    <p data-translate="best_quality">Best quality fish breeder & spawn supplier (All India).</p>
+                    <p data-translate="owner_footer">Owner: Mr. Ashis Nandi</p>
                     <div class="social-links">
                         <a href="https://www.youtube.com/@JamunaFisheries" target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>

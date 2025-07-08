@@ -447,7 +447,7 @@ function closeModal() {
 function testModal() {
     const modal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
-    modalImage.setAttribute('src', 'assets/images/rohu-fish.jpg');
+    modalImage.setAttribute('src', 'assets/images/fish/rohu-carp.webp');
     modalImage.setAttribute('alt', 'Test Image');
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
