@@ -3839,3 +3839,269 @@ button, a, .clickable {
     gap: clamp(0.5rem, 2vw, 0.75rem);
   }
 }
+
+/* ==========================================================================
+   WEBSITE PROTECTION - DISABLE TEXT SELECTION AND ADDITIONAL SECURITY
+   ========================================================================== */
+
+/* Disable text selection globally */
+* {
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+/* Allow text selection only for input fields and editable content */
+input,
+textarea,
+[contenteditable="true"],
+[contenteditable=""] {
+  -webkit-user-select: text !important;
+  -khtml-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+}
+
+/* Disable image dragging */
+img {
+  -webkit-user-drag: none !important;
+  -khtml-user-drag: none !important;
+  -moz-user-drag: none !important;
+  -o-user-drag: none !important;
+  user-drag: none !important;
+  pointer-events: none !important;
+}
+
+/* Re-enable pointer events for interactive elements */
+a, button, input, textarea, select, .clickable {
+  pointer-events: auto !important;
+}
+
+/* Disable selection on specific elements */
+body,
+div,
+span,
+p,
+h1, h2, h3, h4, h5, h6,
+li,
+td,
+th {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+/* Disable context menu styling */
+body {
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+/* Disable highlighting */
+::selection {
+  background: transparent !important;
+}
+
+::-moz-selection {
+  background: transparent !important;
+}
+
+/* Disable outline on focus for security */
+*:focus {
+  outline: none !important;
+}
+
+/* Prevent scrollbar interaction in some browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Webkit browsers */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Additional protection styles */
+.protected-content {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Disable right-click visual feedback */
+.no-context-menu {
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+/* Disable image saving prompt */
+img {
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+/* Disable print media */
+@media print {
+  * {
+    display: none !important;
+  }
+  
+  body::before {
+    content: "This website is protected and cannot be printed.";
+    display: block !important;
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    font-size: 24px !important;
+    color: #ff0000 !important;
+    font-weight: bold !important;
+  }
+}
+
+/* Disable F12 key visual feedback */
+body.devtools-disabled {
+  position: relative;
+}
+
+body.devtools-disabled::before {
+  content: "🔒 Protected Content - Developer Tools Disabled";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ff6b6b;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 999999;
+  display: none;
+}
+
+/* Protection watermark (optional) */
+.protection-watermark {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Disable copy-paste styling */
+.no-copy {
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+/* Developer tools blocking overlay */
+#devtools-block-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: linear-gradient(135deg, #ff0000, #cc0000) !important;
+  z-index: 999999999 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  color: white !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 24px !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  user-select: none !important;
+  pointer-events: all !important;
+  animation: devtools-block-animation 0.5s ease-out !important;
+}
+
+@keyframes devtools-block-animation {
+  0% { 
+    opacity: 0; 
+    transform: scale(0.8); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
+}
+
+/* Prevent any interaction when blocked */
+body.devtools-blocked {
+  overflow: hidden !important;
+  pointer-events: none !important;
+}
+
+body.devtools-blocked * {
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+/* Additional security measures */
+.devtools-warning {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  background: #ff0000 !important;
+  color: white !important;
+  text-align: center !important;
+  padding: 10px !important;
+  font-weight: bold !important;
+  z-index: 999999 !important;
+  animation: blink 1s infinite !important;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0.7; }
+}

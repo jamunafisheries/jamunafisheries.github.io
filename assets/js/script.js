@@ -597,3 +597,644 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('News banner horizontal scrolling initialized successfully');
     }
 }); 
+
+// ==========================================================================
+// WEBSITE PROTECTION - DISABLE RIGHT CLICK AND VIEW SOURCE
+// ==========================================================================
+
+(function() {
+    'use strict';
+
+    // Protection message
+    const protectionMessage = "Content protected! Right-click and developer tools are disabled.";
+
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        showProtectionAlert(protectionMessage);
+        return false;
+    });
+
+    // Disable drag and drop
+    document.addEventListener('dragstart', function(e) {
+        e.preventDefault();
+        return false;
+    });
+
+    // Disable text selection on double click
+    document.addEventListener('selectstart', function(e) {
+        e.preventDefault();
+        return false;
+    });
+
+    // Disable keyboard shortcuts
+    document.addEventListener('keydown', function(e) {
+        // Disable F12 (Developer Tools)
+        if (e.keyCode === 123) {
+            e.preventDefault();
+            showProtectionAlert("Developer tools are disabled!");
+            return false;
+        }
+        
+        // Disable Ctrl+Shift+I (Developer Tools)
+        if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
+            e.preventDefault();
+            showProtectionAlert("Developer tools are disabled!");
+            return false;
+        }
+        
+        // Disable Ctrl+Shift+J (Console)
+        if (e.ctrlKey && e.shiftKey && e.keyCode === 74) {
+            e.preventDefault();
+            showProtectionAlert("Console access is disabled!");
+            return false;
+        }
+        
+        // Disable Ctrl+U (View Source)
+        if (e.ctrlKey && e.keyCode === 85) {
+            e.preventDefault();
+            showProtectionAlert("View source is disabled!");
+            return false;
+        }
+        
+        // Disable Ctrl+Shift+C (Element Inspector)
+        if (e.ctrlKey && e.shiftKey && e.keyCode === 67) {
+            e.preventDefault();
+            showProtectionAlert("Element inspector is disabled!");
+            return false;
+        }
+        
+        // Disable Ctrl+Shift+K (Console in Firefox)
+        if (e.ctrlKey && e.shiftKey && e.keyCode === 75) {
+            e.preventDefault();
+            showProtectionAlert("Console access is disabled!");
+            return false;
+        }
+        
+        // Disable Ctrl+A (Select All)
+        if (e.ctrlKey && e.keyCode === 65) {
+            e.preventDefault();
+            showProtectionAlert("Text selection is disabled!");
+            return false;
+        }
+        
+        // Disable Ctrl+S (Save Page)
+        if (e.ctrlKey && e.keyCode === 83) {
+            e.preventDefault();
+            showProtectionAlert("Page saving is disabled!");
+            return false;
+        }
+        
+        // Disable Ctrl+P (Print)
+        if (e.ctrlKey && e.keyCode === 80) {
+            e.preventDefault();
+            showProtectionAlert("Printing is disabled!");
+            return false;
+        }
+        
+        // Disable Ctrl+C (Copy)
+        if (e.ctrlKey && e.keyCode === 67) {
+            e.preventDefault();
+            showProtectionAlert("Copy is disabled!");
+            return false;
+        }
+        
+        // Disable Ctrl+V (Paste)
+        if (e.ctrlKey && e.keyCode === 86) {
+            e.preventDefault();
+            return false;
+        }
+        
+        // Disable Ctrl+X (Cut)
+        if (e.ctrlKey && e.keyCode === 88) {
+            e.preventDefault();
+            showProtectionAlert("Cut is disabled!");
+            return false;
+        }
+    });
+
+    // Protection alert function
+    function showProtectionAlert(message) {
+        // Create a styled alert overlay
+        const alertOverlay = document.createElement('div');
+        alertOverlay.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999999;
+            font-family: Arial, sans-serif;
+        `;
+
+        const alertBox = document.createElement('div');
+        alertBox.style.cssText = `
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 400px;
+            animation: alertBounce 0.5s ease-out;
+        `;
+
+        alertBox.innerHTML = `
+            <div style="font-size: 48px; margin-bottom: 15px;">🔒</div>
+            <h3 style="margin: 0 0 15px 0; font-size: 20px;">Protected Content</h3>
+            <p style="margin: 0 0 20px 0; font-size: 16px;">${message}</p>
+            <button onclick="this.parentElement.parentElement.remove()" style="
+                background: white;
+                color: #ff6b6b;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 25px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 14px;
+                transition: all 0.3s ease;
+            " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                OK
+            </button>
+        `;
+
+        // Add animation keyframes
+        if (!document.getElementById('alertAnimation')) {
+            const style = document.createElement('style');
+            style.id = 'alertAnimation';
+            style.textContent = `
+                @keyframes alertBounce {
+                    0% { transform: scale(0.3); opacity: 0; }
+                    50% { transform: scale(1.05); }
+                    70% { transform: scale(0.9); }
+                    100% { transform: scale(1); opacity: 1; }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        alertOverlay.appendChild(alertBox);
+        document.body.appendChild(alertOverlay);
+
+        // Auto remove after 3 seconds
+        setTimeout(() => {
+            if (alertOverlay.parentElement) {
+                alertOverlay.remove();
+            }
+        }, 3000);
+    }
+
+    // Enhanced developer tools detection and blocking
+    const devtools = {
+        open: false,
+        orientation: null,
+        blocked: false
+    };
+
+    let devToolsDetected = false;
+    let detectionMethods = 0;
+
+    // Method 1: Window size detection - MORE SENSITIVE
+    function detectDevToolsBySize() {
+        const threshold = 160; // Reduced threshold for better detection
+        if (window.outerHeight - window.innerHeight > threshold || 
+            window.outerWidth - window.innerWidth > threshold) {
+            return true;
+        }
+        return false;
+    }
+
+    // Method 2: Console detection
+    function detectDevToolsByConsole() {
+        let devtools = false;
+        const element = new Image();
+        Object.defineProperty(element, 'id', {
+            get: function() {
+                devtools = true;
+                return 'devtools-detected';
+            }
+        });
+        console.log(element);
+        return devtools;
+    }
+
+    // Method 3: Debugger detection
+    function detectDevToolsByDebugger() {
+        let start = new Date().getTime();
+        debugger;
+        let end = new Date().getTime();
+        return end - start > 100;
+    }
+
+    // Method 4: Console timing detection
+    function detectDevToolsByTiming() {
+        let start = performance.now();
+        console.log('');
+        let end = performance.now();
+        return end - start > 1;
+    }
+
+    // Method 5: Function toString detection
+    function detectDevToolsByToString() {
+        const regex = /./;
+        regex.toString = function() {
+            devToolsDetected = true;
+            return 'devtools-detected';
+        };
+        console.log(regex);
+        return devToolsDetected;
+    }
+
+    // Aggressive blocking function
+    function blockDevTools() {
+        if (devtools.blocked) return;
+        
+        devtools.blocked = true;
+        
+        // Create full-screen blocking overlay
+        const blockOverlay = document.createElement('div');
+        blockOverlay.id = 'devtools-block-overlay';
+        blockOverlay.style.cssText = `
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            background: linear-gradient(135deg, #ff0000, #cc0000) !important;
+            z-index: 999999999 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            align-items: center !important;
+            color: white !important;
+            font-family: Arial, sans-serif !important;
+            font-size: 24px !important;
+            font-weight: bold !important;
+            text-align: center !important;
+            user-select: none !important;
+            pointer-events: all !important;
+        `;
+
+        blockOverlay.innerHTML = `
+            <div style="animation: pulse 1s infinite; margin-bottom: 30px;">
+                <div style="font-size: 80px; margin-bottom: 20px;">🚫</div>
+                <h1 style="font-size: 36px; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                    DEVELOPER TOOLS BLOCKED!
+                </h1>
+                <p style="font-size: 20px; margin-bottom: 30px; max-width: 600px; line-height: 1.4;">
+                    This website is protected against unauthorized access.<br>
+                    Developer tools, console, and inspection are strictly prohibited.
+                </p>
+                <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; margin-bottom: 30px;">
+                    <p style="font-size: 18px; margin-bottom: 10px;">🔒 Protection Features Active:</p>
+                    <ul style="list-style: none; padding: 0; font-size: 16px;">
+                        <li>✓ Right-click disabled</li>
+                        <li>✓ View source blocked</li>
+                        <li>✓ Developer tools blocked</li>
+                        <li>✓ Console access denied</li>
+                        <li>✓ Keyboard shortcuts disabled</li>
+                    </ul>
+                </div>
+                <button onclick="window.location.reload()" style="
+                    background: white;
+                    color: #cc0000;
+                    border: none;
+                    padding: 15px 30px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    border-radius: 25px;
+                    cursor: pointer;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+                    transition: all 0.3s ease;
+                " onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                    🔄 Reload Page
+                </button>
+            </div>
+        `;
+
+        // Add animation styles
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.05); }
+                100% { transform: scale(1); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        document.body.appendChild(blockOverlay);
+
+        // Prevent any interaction with the page
+        document.body.style.overflow = 'hidden';
+        
+        // Block all keyboard events
+        document.addEventListener('keydown', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }, true);
+
+        // Show console warning
+        console.clear();
+        console.log('%c🚫 DEVELOPER TOOLS BLOCKED! 🚫', 'color: red; font-size: 40px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);');
+        console.log('%cThis website is protected against unauthorized access.', 'color: red; font-size: 20px; font-weight: bold;');
+        console.log('%cDeveloper tools access is strictly prohibited.', 'color: red; font-size: 16px;');
+        
+        // Continuous reload if dev tools remain open
+        setTimeout(() => {
+            window.location.reload();
+        }, 3000);
+    }
+
+    // Enhanced detection with multiple methods - BALANCED
+    function runDevToolsDetection() {
+        let detected = false;
+        detectionMethods = 0;
+
+        // Only use window size detection for now (most reliable)
+        if (detectDevToolsBySize()) {
+            detected = true;
+            detectionMethods++;
+        }
+
+        // Block only if dev tools are clearly detected
+        if (detected) {
+            if (!devtools.open) {
+                devtools.open = true;
+                blockDevTools();
+            }
+        } else {
+            devtools.open = false;
+        }
+    }
+
+    // Run detection every 500ms (balanced)
+    setInterval(runDevToolsDetection, 500);
+
+    // Additional detection on focus/blur events
+    window.addEventListener('focus', runDevToolsDetection);
+    window.addEventListener('blur', runDevToolsDetection);
+    window.addEventListener('resize', runDevToolsDetection);
+
+    // Prevent opening in new tab/window
+    window.addEventListener('beforeunload', function(e) {
+        e.preventDefault();
+        e.returnValue = '';
+    });
+
+    // Disable image dragging
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.getElementsByTagName('img');
+        for (let i = 0; i < images.length; i++) {
+            images[i].addEventListener('dragstart', function(e) {
+                e.preventDefault();
+                return false;
+            });
+            images[i].addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                showProtectionAlert("Image protection is active!");
+                return false;
+            });
+        }
+    });
+
+    // Enhanced console protection - BALANCED
+    let consoleCleared = false;
+    
+    // Clear console only when dev tools are detected
+    function clearConsoleIfDevToolsOpen() {
+        if (detectDevToolsBySize()) {
+            console.clear();
+            console.log('%c🚫 DEVELOPER TOOLS BLOCKED! 🚫', 'color: red; font-size: 30px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);');
+            console.log('%cThis website is protected against unauthorized access.', 'color: red; font-size: 16px; font-weight: bold;');
+            console.log('%cConsole usage is strictly prohibited.', 'color: red; font-size: 14px;');
+        }
+    }
+    
+    // Check and clear console every 2 seconds
+    setInterval(clearConsoleIfDevToolsOpen, 2000);
+
+    // Disable console functions - BALANCED (only disable some functions)
+    const disableFunctions = ['debug', 'info', 'warn', 'error', 'assert', 'dir', 'dirxml', 'group', 'groupEnd', 'time', 'timeEnd', 'count', 'trace', 'profile', 'profileEnd', 'table'];
+    
+    // Store original functions but don't block everything
+    const originalConsole = {};
+    disableFunctions.forEach(func => {
+        originalConsole[func] = console[func];
+        console[func] = function() {
+            // Only block if dev tools are detected
+            if (detectDevToolsBySize()) {
+                blockDevTools();
+            }
+            return false;
+        };
+    });
+
+    // Don't prevent console object manipulation - too aggressive
+    // Object.defineProperty(window, 'console', {
+    //     get: function() {
+    //         blockDevTools();
+    //         return originalConsole;
+    //     },
+    //     set: function() {
+    //         blockDevTools();
+    //         return false;
+    //     }
+    // });
+
+    // Don't detect console usage - too aggressive
+    // let consoleUsageDetected = false;
+    // const originalLog = console.log;
+    // console.log = function() {
+    //     if (!consoleUsageDetected) {
+    //         consoleUsageDetected = true;
+    //         blockDevTools();
+    //     }
+    //     return false;
+    // };
+
+})();
+
+// Additional aggressive protection measures
+(function() {
+    'use strict';
+    
+    // Prevent iframe embedding
+    if (window.top !== window.self) {
+        window.top.location = window.self.location;
+    }
+    
+    // Detect and block Firebug
+    if (window.Firebug && window.Firebug.chrome && window.Firebug.chrome.isInitialized) {
+        window.location.href = 'about:blank';
+    }
+    
+    // Block common developer tool shortcuts with immediate action
+    document.addEventListener('keydown', function(e) {
+        // More aggressive F12 blocking
+        if (e.keyCode === 123 || e.key === 'F12') {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+            blockDevTools();
+            return false;
+        }
+        
+        // Block all developer shortcuts
+        if ((e.ctrlKey || e.metaKey) && (
+            (e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) || // Ctrl+Shift+I/J/C
+            e.keyCode === 85 || // Ctrl+U
+            e.keyCode === 83 || // Ctrl+S
+            e.keyCode === 80    // Ctrl+P
+        )) {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+            blockDevTools();
+            return false;
+        }
+    }, true);
+    
+    // Monitor for developer tools opening through various methods - DISABLED TO PREVENT LOOPS
+    // let devToolsChecker = setInterval(() => {
+    //     // Check if console is open (Chrome method)
+    //     if (window.chrome && window.chrome.runtime && window.chrome.runtime.onConnect) {
+    //         blockDevTools();
+    //     }
+    //     
+    //     // Check window dimensions aggressively
+    //     if (window.outerWidth - window.innerWidth > 160 || 
+    //         window.outerHeight - window.innerHeight > 160) {
+    //         blockDevTools();
+    //     }
+    //     
+    //     // Check for common developer tool indicators
+    //     if (window.devtools || window.console._commandLineAPI) {
+    //         blockDevTools();
+    //     }
+    //     
+    //     // Check for Firebug
+    //     if (window.Firebug && window.Firebug.chrome && window.Firebug.chrome.isInitialized) {
+    //         blockDevTools();
+    //     }
+    //     
+    //     // Check for Chrome DevTools
+    //     if (window.chrome && window.chrome.runtime) {
+    //         blockDevTools();
+    //     }
+    // }, 50); // Every 50ms
+    
+    // Override common debugging functions
+    window.eval = function() {
+        blockDevTools();
+        return false;
+    };
+    
+    window.Function = function() {
+        blockDevTools();
+        return false;
+    };
+    
+    // Block source viewing attempts
+    document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && e.keyCode === 85) { // Ctrl+U
+            e.preventDefault();
+            blockDevTools();
+            return false;
+        }
+    });
+    
+    // Prevent right-click with immediate blocking
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        blockDevTools();
+        return false;
+    }, true);
+    
+    // Block printing
+    window.addEventListener('beforeprint', function(e) {
+        e.preventDefault();
+        blockDevTools();
+        return false;
+    });
+    
+    // Monitor for debugger statements
+    let debuggerBlocked = false;
+    Object.defineProperty(window, 'debugger', {
+        get: function() {
+            if (!debuggerBlocked) {
+                debuggerBlocked = true;
+                blockDevTools();
+            }
+            return undefined;
+        }
+    });
+    
+    // Prevent source code access through various methods
+    if (window.location.protocol === 'view-source:') {
+        window.location.href = 'about:blank';
+    }
+    
+    // Block common inspection methods
+    ['inspect', 'getEventListeners', 'debug', 'undebug', 'monitor', 'unmonitor', 'monitorEvents', 'unmonitorEvents', 'copy', 'dir', 'dirxml', 'keys', 'values', 'profile', 'profileEnd', 'table'].forEach(method => {
+        if (window[method]) {
+            window[method] = function() {
+                blockDevTools();
+                return false;
+            };
+        }
+    });
+    
+    // Smart DOM protection - only block when dev tools are detected
+    let devToolsDetected = false;
+    
+    // Store original DOM methods
+    const originalQuerySelector = document.querySelector;
+    const originalQuerySelectorAll = document.querySelectorAll;
+    const originalGetElementById = document.getElementById;
+    const originalGetElementsByClassName = document.getElementsByClassName;
+    const originalGetElementsByTagName = document.getElementsByTagName;
+    const originalGetAttribute = Element.prototype.getAttribute;
+    
+    // Smart DOM method protection - only block if dev tools are open
+    function smartDOMProtection() {
+        if (detectDevToolsBySize()) {
+            devToolsDetected = true;
+            
+            // Override DOM methods only when dev tools are detected
+            document.querySelector = function() {
+                blockDevTools();
+                return null;
+            };
+            
+            document.querySelectorAll = function() {
+                blockDevTools();
+                return [];
+            };
+            
+            document.getElementById = function() {
+                blockDevTools();
+                return null;
+            };
+            
+            // Block image extraction only when dev tools are open
+            Element.prototype.getAttribute = function(name) {
+                if (name === 'src' || name === 'href') {
+                    blockDevTools();
+                    return null;
+                }
+                return originalGetAttribute.call(this, name);
+            };
+        }
+    }
+    
+    // Check for dev tools every 2 seconds and apply smart protection
+    setInterval(smartDOMProtection, 2000);
+    
+})(); 
